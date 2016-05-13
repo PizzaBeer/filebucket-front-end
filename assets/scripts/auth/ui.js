@@ -1,7 +1,6 @@
 'use strict';
 
 const app = require('../app-data');
-// const newGame = require('./index.js');
 
 const signInSuccess = (data) => {
   app.user = data.user;
