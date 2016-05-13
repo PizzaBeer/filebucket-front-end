@@ -50,13 +50,13 @@
     <h4>Sign Up</h4>
       <form id="sign-up">
         <div class="form-group">
-          <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <input type="email" name="credentials[email]" class="form-control validate" id="exampleInputEmail1" placeholder="Email">
         </div>
         <div class="form-group">
-          <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input id="password" type="password" class="validate" name="credentials[password]" placeholder="Password">
         </div>
         <div class="form-group">
-          <input type="password" name="credentials[password_confirmation]" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+          <input id="password" type="password" class="validate" name="credentials[password_confirmation]" placeholder="Password">
         </div>
         <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up</button>
       </form>
@@ -67,16 +67,19 @@
   </div>
 </div>
 
+
+
+
 <!-- Sign In -->
 <div id="sign-in-modal" class="modal">
   <div class="modal-content">
     <h4>Modal Header</h4>
       <form id="sign-in">
         <div class="form-group">
-          <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <input type="email" name="credentials[email]" class="form-control validate" id="exampleInputEmail1" placeholder="Email">
         </div>
         <div class="form-group">
-          <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input id="password" type="password" class="validate" name="credentials[password]" placeholder="Password">
         </div>
         <button class="btn waves-effect waves-light" type="submit" name="action">Sign In</button>
       </form>
@@ -93,10 +96,10 @@
     <h4>Change Password</h4>
       <form id="change-password">
         <div class="form-group">
-          <input type="password" name="passwords[old]" class="form-control" id="exampleInputPassword1" placeholder="Current Password">
+          <input id="password" type="password" class="validate" name="passwords[old]" placeholder="Password">
         </div>
         <div class="form-group">
-          <input type="password" name="passwords[new]" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+          <input id="password" type="password" class="validate" name="passwords[new]" placeholder="Password">
         </div>
         <button class="btn waves-effect waves-light" type="submit" name="action">Change Password</button>
       </form>
