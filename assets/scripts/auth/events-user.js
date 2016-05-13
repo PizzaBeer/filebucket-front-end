@@ -1,12 +1,12 @@
 'use strict';
 
-const getFormFields = require('../../../lib/get-form-fields.js');
+const getFormFields = require('lib/get-form-fields.js');
 
 const authApi = require('./api');
 const authUi = require('./ui');
 
 
-const signCheck = () => {
+const userEvents = () => {
 
   $('#sign-up').on('submit', function (event) {
     event.preventDefault();
@@ -38,5 +38,5 @@ const signCheck = () => {
 
 
   module.exports = {
-   signCheck,
+   userEvents,
   };
