@@ -26,15 +26,24 @@
         </div>
       </nav>
 <!-- Navbar -->
-
-
-
-
-
-
       <h1>Veggies</h1>
 
       <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+
+      <div class="upload-file">
+        <form action="#">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+        </form>
+      </div>
+
     </body>
 
 
@@ -50,7 +59,7 @@
     <h4>Sign Up</h4>
       <form id="sign-up">
         <div class="form-group">
-          <input type="email" name="credentials[email]" class="form-control validate" id="exampleInputEmail1" placeholder="Email">
+          <input id="email" type="email" class="validate" name="credentials[email]" placeholder="Email" >
         </div>
         <div class="form-group">
           <input id="password" type="password" class="validate" name="credentials[password]" placeholder="Password">
@@ -76,7 +85,7 @@
     <h4>Modal Header</h4>
       <form id="sign-in">
         <div class="form-group">
-          <input type="email" name="credentials[email]" class="form-control validate" id="exampleInputEmail1" placeholder="Email">
+          <input id="email" type="email" class="validate" name="credentials[email]" placeholder="Email">
         </div>
         <div class="form-group">
           <input id="password" type="password" class="validate" name="credentials[password]" placeholder="Password">
