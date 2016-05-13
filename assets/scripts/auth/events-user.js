@@ -2,7 +2,7 @@
 
 const getFormFields = require('lib/get-form-fields.js');
 
-const authApi = require('./api');
+const authApi = require('./api-user');
 const authUi = require('./ui');
 
 
