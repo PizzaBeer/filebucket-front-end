@@ -7,21 +7,20 @@ const signUp = (success, failure, data) => {
     method: "POST",
     url: app.api + '/sign-up',
     data,
-
   })
-  .done(success)
-  .fail(failure);
-};
+  .done((success) => console.log(success))
+   .fail((fail) => console.error(fail));
+  };
 
-const signIn = (success, failure, data) => {
+const signIn = (data) => {
   $.ajax({
     method: "POST",
     url: app.api + '/sign-in',
     data,
     dataProcessing: false,
-
-  }).done(success)
-    .fail(failure);
+  })
+  .done((success) => console.log(success))
+   .fail((fail) => console.error(fail));
 };
 
 const signOut = (success, failure) => {
@@ -46,9 +45,9 @@ const changePass = (success, failure, data) => {
       Authorization: 'Token token='+ app.user.token,
     },
   })
-  .done(success)
-  .fail(failure);
-};
+  .done((success) => console.log(success))
+   .fail((fail) => console.error(fail));
+  };
 
 
 module.exports = {
