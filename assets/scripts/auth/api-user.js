@@ -2,7 +2,7 @@
 
 const app = require('../app-data');
 
-const signUp = (success, failure, data) => {
+const signUp = (data) => {
   $.ajax({
     method: "POST",
     url: app.api + '/sign-up',
@@ -23,7 +23,7 @@ const signIn = (data) => {
    .fail((fail) => console.error(fail));
 };
 
-const signOut = (success, failure) => {
+const signOut = (data) => {
   $.ajax({
     method: "DELETE",
     url: app.api + '/sign-out/' + app.user.id,
@@ -31,8 +31,8 @@ const signOut = (success, failure) => {
       Authorization: 'Token token='+ app.user.token,
     },
   })
-  .done(success)
-  .fail(failure);
+  .done((success) => console.log(success))
+   .fail((fail) => console.error(fail));
 };
 
 const changePass = (success, failure, data) => {
