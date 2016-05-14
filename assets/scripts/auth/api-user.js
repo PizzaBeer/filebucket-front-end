@@ -27,6 +27,7 @@ const signOut = (data) => {
   $.ajax({
     method: "DELETE",
     url: app.api + '/sign-out/' + app.user.id,
+    data,
     headers: {
       Authorization: 'Token token='+ app.user.token,
     },
