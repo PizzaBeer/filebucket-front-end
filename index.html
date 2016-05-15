@@ -1,20 +1,142 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>FileBucket</title>
 
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js" defer></script>
+
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+<!-- Navbar -->
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">QLOUD.</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <a class="waves-effect waves-light btn modal-trigger" href="#sign-up-modal">Sign Up</a>
+              <a class="waves-effect waves-light btn modal-trigger" href="#sign-in-modal">Sign In</a>
+              <a class="waves-effect waves-light btn modal-trigger" href="#sign-out-modal">Sign Out</a>
+              <a class="waves-effect waves-light btn modal-trigger" href="#change-password-modal">Change Password</a>
+          </ul>
+        </div>
+      </nav>
+<!-- Navbar -->
+      <h1>Veggies</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+
+      <div class="upload-file">
+        <form action="#">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+        </form>
+      </div>
+
     </body>
+
+
+
+
+
+
+<!-- Modals -->
+
+<!-- Sign Up -->
+<div id="sign-up-modal" class="modal">
+  <div class="modal-content">
+    <h4>Sign Up</h4>
+      <form id="sign-up">
+        <div class="form-group">
+          <input id="email" type="email" class="validate" name="credentials[email]" placeholder="Email" >
+        </div>
+        <div class="form-group">
+          <input id="password" type="password" class="validate" name="credentials[password]" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input id="password" type="password" class="validate" name="credentials[password_confirmation]" placeholder="Password">
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up</button>
+      </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
+
+
+
+
+<!-- Sign In -->
+<div id="sign-in-modal" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+      <form id="sign-in">
+        <div class="form-group">
+          <input id="email" type="email" class="validate" name="credentials[email]" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input id="password" type="password" class="validate" name="credentials[password]" placeholder="Password">
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Sign In</button>
+      </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
+
+<!-- Change Password -->
+<div id="change-password-modal" class="modal">
+  <div class="modal-content">
+    <h4>Change Password</h4>
+      <form id="change-password">
+        <div class="form-group">
+          <input id="password" type="password" class="validate" name="passwords[old]" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input id="password" type="password" class="validate" name="passwords[new]" placeholder="Password">
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Change Password</button>
+      </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
+
+<!-- Sign Out -->
+<div id="sign-out-modal" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <form id="change">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Sign Out</button>
+    </form>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 </html>
