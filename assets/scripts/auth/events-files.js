@@ -26,13 +26,12 @@ const fileEventHandlers = () => {
     console.log(fileId);
   });
 
-
-  // $('#add-tag').on('click', function(e) {
-  //   e.preventDefault();
-  //   let data = getFormFields(this);
-  //   let fileId = '';
-  //   authApiFiles.editFile(authUi.success, authUi.failure, data, fileId);
-  // });
+  $('#edit-tag-form').on('click', function(e) {
+    e.preventDefault();
+    let data = getFormFields(this);
+    let fileId = $('.add-tag-btn').attr('data-id');
+    authApiFiles.editFile(authUi.success, authUi.failure, data, fileId);
+  });
 
 };
 
