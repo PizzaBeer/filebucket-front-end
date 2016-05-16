@@ -9,7 +9,6 @@ const fileEventHandlers = () => {
 
   $('#application-x-www-form-urlencoded').on('submit', function(e) {
     e.preventDefault();
-    Add file-ui to file AJAX functions
     let data = new FormData(this);
     authApiFiles.uploadFile(fileUi.uploadFileSuccess, fileUi.uploadFileFailure, data);
     console.log(data);
@@ -31,7 +30,7 @@ const fileEventHandlers = () => {
     e.preventDefault();
     let data = getFormFields(this);
     let fileId = $('.add-tag-btn').attr('data-id');
-    authApiFiles.editFile(authUi.success, authUi.failure, data, fileId);
+    authApiFiles.editFile(fileUi.editFileSuccess, fileUi.failure, data, fileId);
   });
 
 };
