@@ -1,7 +1,7 @@
 'use strict';
 
 const app = {
-  api: 'http://localhost:3000/',
+  api: 'http://localhost:3000',
   };
 
   let currentUser = {
