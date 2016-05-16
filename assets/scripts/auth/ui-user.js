@@ -6,7 +6,6 @@ const signInSuccess = (data) => {
   app.currentUser.token = data.user.token;
   app.currentUser.id = data.user._id;
   console.log(app.currentUser);
-  console.log(data);
   console.log("Sign in successful");
 };
 
