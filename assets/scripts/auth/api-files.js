@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../app-data');
+const display = require('../display');
 
 const uploadFile = (success, failure, data) => {
   $.ajax({
@@ -11,25 +12,24 @@ const uploadFile = (success, failure, data) => {
       contentType: false,
       data,
       headers: {
-      Authorization: 'Token token=' + app.currentUser.token
-    },
-  }).done(success)
+        Authorization: 'Token token=' + app.currentUser.token
+      },
+    }).done(success)
     .fail(failure);
-  };
+};
 
 
 
-const getAllFiles = function(){
+const getAllFiles = function(success, failure) {
   $.ajax({
-    url: app.server.api + '/files/',
-    headers:{
+      url: app.server.api + '/files',
+      headers: {
         Authorization: 'Token token=' + app.currentUser.token,
-    },
-  }).done(function(data){
-    // call Handlebars function:
-    // displayAllFiles(data);
-    console.log(data);
-  });
+      },
+    }).done((data) => {
+      display.displayAllFiles(data);
+    })
+    .fail(failure);
 };
 
 
