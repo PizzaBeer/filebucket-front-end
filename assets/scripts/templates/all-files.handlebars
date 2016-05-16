@@ -14,7 +14,7 @@
         <td>{{this.updated_at}}</td>
         <td>{{this.path}}</td>
         <td><a class="waves-effect waves-light btn modal-trigger" data-id="{{this._id}}" href="#edit-tags-modal" id="edit-tags">Edit Tags</a></td>
-        <td><a id="delete-file" class="waves-effect waves-light btn modal-trigger" href="#delete-file-modal" >Delete File</a></td>
+        <td><a id="delete-file" class="waves-effect waves-light btn modal-trigger" data-id="{{this._id}}" href="#delete-file-modal" >Delete File</a></td>
       </tr>
     {{/files}}
   </tbody>
