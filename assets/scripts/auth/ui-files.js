@@ -2,6 +2,7 @@
 
 const uploadFileSuccess = () => {
   console.log('File successfully uploaded.');
+  // will create toast/tool tip for upload success or 
 };
 
 const uploadFileFailure = (error) => {
