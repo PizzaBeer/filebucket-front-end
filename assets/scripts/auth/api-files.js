@@ -30,9 +30,23 @@ const getAllFiles = function(success, failure) {
     .fail(failure);
 };
 
+const editFile = function(success, failure, data, fileId) {
+  $.ajax({
+    method: "PATCH",
+    url: app.server.api + '/files/' + fileId,
+    data,
+    headers: {
+      Authorization: 'Token token='+ app.currentUser.token,
+    },
+  })
+  .done(success)
+   .fail(failure);
+};
+
 
 
 module.exports = {
   uploadFile,
-  getAllFiles
+  getAllFiles,
+  editFile
 };
