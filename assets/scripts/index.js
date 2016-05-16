@@ -13,4 +13,5 @@ $(() => {
   $('.modal-trigger').leanModal();
   userEvents.userEventHandlers();
   fileEvents.fileEventHandlers();
+  $('.hide_until_login').hide();
 });
