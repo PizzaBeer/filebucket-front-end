@@ -40,11 +40,11 @@ const fileEventHandlers = () => {
     console.log(fileId);
   });
 
-  $('#delete-file-form').on('click', function(e) {
+  $('#delete-file-btn').on('click', function(e) {
     e.preventDefault();
-    let data = getFormFields(this);
-    let fileId = $('.delete-file-btn').attr('data-id');
-    authApiFiles.editFile(authUi.success, authUi.failure, data, fileId);
+    let fileId = $(this).attr('data-id');
+    console.log(fileId);
+    authApiFiles.deleteFile(authUi.success, authUi.failure,fileId);
   });
 };
 
