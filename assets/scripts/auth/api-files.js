@@ -18,8 +18,6 @@ const uploadFile = (success, failure, data) => {
     .fail(failure);
 };
 
-
-
 const getAllFiles = function(success, failure) {
   $.ajax({
       url: app.server.api + '/files',
