@@ -33,6 +33,13 @@ const fileEventHandlers = () => {
     authApiFiles.editFile(authUi.success, authUi.failure, data, fileId);
   });
 
+  $('#all-files').on('click', '#delete-file', function(e) {
+    e.preventDefault();
+    let fileId = $(e.target).attr('data-id');
+    $('.delete-file-btn').attr('data-id', fileId);
+    console.log(fileId);
+  });
+
   $('#delete-file-form').on('click', function(e) {
     e.preventDefault();
     let data = getFormFields(this);
