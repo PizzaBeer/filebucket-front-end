@@ -13,8 +13,8 @@
         <td>{{this.name}}</td>
         <td>{{this.updated_at}}</td>
         <td>{{this.path}}</td>
-        <td><a id="edit-tags" class="waves-effect waves-light btn">Edit Tags</a></td>
-        <td><a id="delete-file" class="waves-effect waves-light btn">Delete File</a></td>
+        <td><a class="waves-effect waves-light btn modal-trigger" href="#edit-tags-modal" id="edit-tags">Edit Tags</a></td>
+        <td><a id="delete-file" class="waves-effect waves-light btn modal-trigger" href="#delete-file-modal" >Delete File</a></td>
       </tr>
     {{/files}}
   </tbody>
