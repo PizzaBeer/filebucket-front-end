@@ -1,6 +1,6 @@
 'use strict';
 
-const app = {
+const server = {
   api: 'http://localhost:3000',
   };
 
@@ -10,6 +10,6 @@ const app = {
   };
 
 module.exports = {
-  app,
+  server,
   currentUser
 };
