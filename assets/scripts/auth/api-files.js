@@ -6,7 +6,6 @@ const uploadFile = (success, failure, data) => {
   $.ajax({
       method: 'POST',
       url: app.server.api + '/files',
-      dataType: 'json',
       processData: false,
       contentType: false,
       data,
