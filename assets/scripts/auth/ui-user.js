@@ -11,6 +11,7 @@ const signInSuccess = (data) => {
 
 const signUpSuccess = (data) => {
   console.log("Sign up successful");
+  $('#sign-up-modal').closeModal();
 };
 
 const signOutSuccess = () => {
@@ -30,6 +31,7 @@ const failure = (error) => {
 module.exports = {
   failure,
   success,
+  signUpSuccess,
   signOutSuccess,
   signInSuccess,
 };
