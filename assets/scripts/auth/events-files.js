@@ -43,7 +43,7 @@ const fileEventHandlers = () => {
   $('#delete-btn').on('click', function(e) {
     e.preventDefault();
     let fileId = $('.delete-file-btn').attr('data-id');
-    authApiFiles.deleteFile(authUi.success, authUi.failure, data, fileId);
+    authApiFiles.deleteFile(authUi.success, authUi.failure, fileId);
   });
 };
 
