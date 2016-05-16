@@ -2,7 +2,7 @@
 
 const app = require('../app-data');
 
-const signUp = (data) => {
+const signUp = (success, failure, data) => {
   $.ajax({
     method: "POST",
     url: app.api + '/sign-up',
@@ -12,7 +12,7 @@ const signUp = (data) => {
    .fail((fail) => console.error(fail));
   };
 
-const signIn = (data) => {
+const signIn = (success, failure, data) => {
   $.ajax({
     method: "POST",
     url: app.api + '/sign-in',
@@ -23,7 +23,7 @@ const signIn = (data) => {
    .fail((fail) => console.error(fail));
 };
 
-const signOut = (data) => {
+const signOut = (success, failure, data) => {
   $.ajax({
     method: "DELETE",
     url: app.api + '/sign-out/' + app.user.id,
