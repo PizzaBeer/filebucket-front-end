@@ -19,18 +19,18 @@ const uploadFile = (success, failure, data) => {
 
 
 
-  const getAllFiles = function(){
-    $.ajax({
-      url: app.server.api + '/files/',
-      headers:{
-          Authorization: 'Token token=' + app.currentUser.token,
-      },
-    }).done(function(data){
-      // call Handlebars function:
-      // displayAllFiles(data);
-      console.log(data);
-    });
-  };
+const getAllFiles = function(){
+  $.ajax({
+    url: app.server.api + '/files/',
+    headers:{
+        Authorization: 'Token token=' + app.currentUser.token,
+    },
+  }).done(function(data){
+    // call Handlebars function:
+    // displayAllFiles(data);
+    console.log(data);
+  });
+};
 
 
 
