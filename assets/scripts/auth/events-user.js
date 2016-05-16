@@ -35,14 +35,6 @@ const userEventHandlers = () => {
     console.log(data);
   });
 
-  ///File CRUD EVENT HANDLERS///
-  $('#application-x-www-form-urlencoded').on('submit', function (event) {
-    event.preventDefault();
-    let data = getFormFields(this);
-    authApiFiles.uploadFile(authUi.success, authUi.failure, data);
-    console.log(data);
-  });
-
 };
 
 
