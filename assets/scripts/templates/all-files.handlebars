@@ -1,7 +1,19 @@
-{{#each file}}
-  <div class="container">
-    <div class="{{this.name}}" data-id="{{this.id}}">
-        <p>{{this.name}}</p>
-    </div>
-  </div>
-{{/each}}
+<table class="centered striped bordered file">
+  <thead>
+    <tr>
+      <th data-field="name">File Name</th>
+      <th data-field="modified">Last Modified</th>
+      <th data-field="path">Path</th>
+      <th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#files}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.updated_at}}</td>
+        <td>{{this.path}}</td>
+      </tr>
+    {{/files}}
+  </tbody>
+</table>
