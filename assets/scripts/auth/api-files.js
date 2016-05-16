@@ -44,6 +44,8 @@ const editFile = function(success, failure, data, fileId) {
 };
 
 const deleteFile = function(success, failure, fileId) {
+  debugger;
+  console.log(fileId);
   $.ajax({
     method: "DELETE",
     url: app.server.api + '/files/' + fileId,
