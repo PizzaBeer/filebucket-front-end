@@ -43,11 +43,10 @@ const editFile = function(success, failure, data, fileId) {
    .fail(failure);
 };
 
-const deleteFile = function(success, failure, data, fileId) {
+const deleteFile = function(success, failure, fileId) {
   $.ajax({
     method: "DELETE",
     url: app.server.api + '/files/' + fileId,
-    data,
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
     },
