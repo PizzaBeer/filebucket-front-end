@@ -27,11 +27,6 @@ const changePwSuccess = (data) => {
   $('#change-password-modal').closeModal();
 };
 
-const signUpSuccess = (data) => {
-  console.log("Sign up successful");
-  $('#sign-up-modal').closeModal();
-};
-
 const success = (data) => {
   console.log(data);
 };
