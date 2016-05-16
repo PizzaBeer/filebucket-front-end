@@ -2,52 +2,52 @@
 
 const app = require('../app-data');
 
-const signUp = (data) => {
+const signUp = (success, failure, data) => {
   $.ajax({
     method: "POST",
-    url: app.api + '/sign-up',
+    url: app.server.api + '/sign-up',
     data,
   })
-  .done((success) => console.log(success))
-   .fail((fail) => console.error(fail));
+  .done(success)
+   .fail(failure);
   };
 
-const signIn = (data) => {
+const signIn = (success, failure, data) => {
   $.ajax({
     method: "POST",
-    url: app.api + '/sign-in',
+    url: app.server.api + '/sign-in',
     data,
     dataProcessing: false,
   })
-  .done((success) => console.log(success))
-   .fail((fail) => console.error(fail));
+  .done(success)
+   .fail(failure);
 };
 
-const signOut = (data) => {
+const signOut = (success, failure, data) => {
   $.ajax({
     method: "DELETE",
-    url: app.api + '/sign-out/' + app.user.id,
+    url: app.server.api + '/sign-out/' + app.currentUser.id,
     data,
     headers: {
-      Authorization: 'Token token='+ app.user.token,
+      Authorization: 'Token token='+ app.currentUser.token,
     },
   })
-  .done((success) => console.log(success))
-   .fail((fail) => console.error(fail));
+  .done(success)
+   .fail(failure);
 };
 
 const changePass = (success, failure, data) => {
-  // if (!app.user) bad;
+  // if (!app.currentUser) bad;
   $.ajax({
     method: "PATCH",
-    url: app.api + '/change-password/' + app.user.id,
+    url: app.server.api + '/change-password/' + app.currentUser.id,
     data,
     headers: {
-      Authorization: 'Token token='+ app.user.token,
+      Authorization: 'Token token='+ app.currentUser.token,
     },
   })
-  .done((success) => console.log(success))
-   .fail((fail) => console.error(fail));
+  .done(success)
+   .fail(failure);
   };
 
 

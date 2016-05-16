@@ -2,20 +2,15 @@
 
 const app = require('../app-data');
 
-let currentUser = {
-  id: undefined,
-  token:''
-};
-
 const signInSuccess = (data) => {
-  app.user = currentUser;
-  console.log(app);
-  console.log(data);
+  app.currentUser.token = data.user.token;
+  app.currentUser.id = data.user._id;
+  console.log(app.currentUser);
   console.log("Sign in successful");
 };
 
 const signOutSuccess = () => {
-  currentUser = null;
+  app.currentUser = null;
   console.log(app);
   console.log("You signed bro. Sweet!");
 };
@@ -33,6 +28,4 @@ module.exports = {
   success,
   signOutSuccess,
   signInSuccess,
-  app,
-  currentUser,
 };
