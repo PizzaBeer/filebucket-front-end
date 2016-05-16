@@ -9,4 +9,7 @@ const app = {
     token:''
   };
 
-module.exports =  app;
+module.exports = {
+  app,
+  currentUser
+};
