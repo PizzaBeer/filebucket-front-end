@@ -8,8 +8,8 @@ const signUp = (success, failure, data) => {
     url: app.server.api + '/sign-up',
     data,
   })
-  .done((success) => console.log(success))
-   .fail((fail) => console.error(fail));
+  .done(success)
+   .fail(failure);
   };
 
 const signIn = (success, failure, data) => {
@@ -19,8 +19,8 @@ const signIn = (success, failure, data) => {
     data,
     dataProcessing: false,
   })
-  .done((success) => console.log(success))
-   .fail((fail) => console.error(fail));
+  .done(success)
+   .fail(failure);
 };
 
 const signOut = (success, failure, data) => {
@@ -32,8 +32,8 @@ const signOut = (success, failure, data) => {
       Authorization: 'Token token='+ app.currentUser.token,
     },
   })
-  .done((success) => console.log(success))
-   .fail((fail) => console.error(fail));
+  .done(success)
+   .fail(failure);
 };
 
 const changePass = (success, failure, data) => {
@@ -46,8 +46,8 @@ const changePass = (success, failure, data) => {
       Authorization: 'Token token='+ app.currentUser.token,
     },
   })
-  .done((success) => console.log(success))
-   .fail((fail) => console.error(fail));
+  .done(success)
+   .fail(failure);
   };
 
 
