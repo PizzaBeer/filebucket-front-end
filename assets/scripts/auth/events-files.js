@@ -7,8 +7,8 @@ const display = require('../display');
 const fileEventHandlers = () => {
 
 
-  $('#application-x-www-form-urlencoded').on('submit', function(event) {
-    event.preventDefault();
+  $('#application-x-www-form-urlencoded').on('submit', function(e) {
+    e.preventDefault();
     let data = new FormData(this);
     authApiFiles.uploadFile(authUi.success, authUi.failure, data);
     console.log(data);
@@ -18,6 +18,21 @@ const fileEventHandlers = () => {
     e.preventDefault();
     authApiFiles.getAllFiles(display.displayAllFiles, authUi.failure);
   });
+
+  $('#all-files').on('click', '#edit-tags', function(e) {
+    e.preventDefault();
+    let fileId = $(e.target).attr('data-id');
+    $('.add-tag-btn').attr('data-id', fileId);
+    console.log(fileId);
+  });
+
+  $('#edit-tag-form').on('click', function(e) {
+    e.preventDefault();
+    let data = getFormFields(this);
+    let fileId = $('.add-tag-btn').attr('data-id');
+    authApiFiles.editFile(authUi.success, authUi.failure, data, fileId);
+  });
+
 };
 
 module.exports = {

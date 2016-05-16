@@ -47,10 +47,6 @@
     </div>
 
 
-    <div class="add-tag-button">
-      <a class="waves-effect waves-light btn modal-trigger" href="#add-tag-modal">Add Tag</a>
-    </div>
-
     <div class="row">
       <a id="get-files" class="waves-effect waves-light btn">Get Files</a>
     </div>
@@ -148,22 +144,20 @@
 </div>
 
 
-<!-- Add Tags -->
-<div id="add-tag-modal" class="modal modal-fixed-footer">
+<!--Edit Tags Modal -->
+<div id="edit-tags-modal" class="modal">
   <div class="modal-content">
-    <h4>Add Tag</h4>
-    <form id="add-tag">
-      <label>Tags
-        <input type="text" name="file[tags]">
-        <button class="btn waves-effect waves-light" type="submit" name="action">Add Tag</button>
-      </label>
+    <form id="edit-tag-form">
+        <input type="text" name="file[tags]" placeholder="favorites">
+        <button class="btn waves-effect waves-light add-tag-btn" type="submit" name="action">Add Tag</button>
     </form>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
   </div>
 </div>
-<!-- End Add Tags -->
+<!--End Edit Tags Modal -->
+
 
 
 
