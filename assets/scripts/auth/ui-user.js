@@ -9,6 +9,10 @@ const signInSuccess = (data) => {
   console.log("Sign in successful");
 };
 
+const signUpSuccess = (data) => {
+  console.log("Sign up successful");
+};
+
 const signOutSuccess = () => {
   app.currentUser = null;
   console.log(app);
