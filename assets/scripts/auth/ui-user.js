@@ -8,6 +8,7 @@ const signInSuccess = (data) => {
   console.log(app.currentUser);
   console.log("Sign in successful");
   $('#sign-in-modal').closeModal();
+  $('.hide_until_login').show();
 };
 
 const signUpSuccess = (data) => {
