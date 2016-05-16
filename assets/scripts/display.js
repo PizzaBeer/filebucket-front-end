@@ -1,6 +1,5 @@
 'use strict';
 
-
 const displayAllFiles = function(files) {
   let allFilesTemplate = require('./templates/all-files.handlebars');
   $('.all-files').html(allFilesTemplate({
@@ -8,7 +7,6 @@ const displayAllFiles = function(files) {
   }));
 };
 
-
-
-
-module.exports = displayAllFiles;
+module.exports = {
+  displayAllFiles,
+};
