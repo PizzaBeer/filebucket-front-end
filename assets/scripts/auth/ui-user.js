@@ -7,6 +7,7 @@ const signInSuccess = (data) => {
   app.currentUser.id = data.user._id;
   console.log(app.currentUser);
   console.log("Sign in successful");
+  $('#sign-in-modal').closeModal();
 };
 
 const signUpSuccess = (data) => {
