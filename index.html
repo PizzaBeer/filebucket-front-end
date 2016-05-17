@@ -14,7 +14,7 @@
 
 <body class="body section">
 
-  <!-- Navbar -->
+<!-- Navbar -->
   <div class="header">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid nav-header">
@@ -36,77 +36,51 @@
       </div>
     </nav>
   </div>
-  <!-- End of Navbar-->
+<!-- End Navbar-->
 
 
-<!-- Main Body with buttons -->
+<!-- Main Body -->
 <div class="section container">
 
-<!-- Side Bar
 
-<div class="row row-offcanvas row-offcanvas-left">
-  <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+<!--Side Bar -->
+<div class="row">
+  <div class="col-sm-3">
     <div class="sidebar-nav">
-      <ul class="nav">
-        <li>
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#upload-file-modal">
-            Upload File
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
-        </li>
-        <li>
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#">
-            Add Folder
-          </button>
-        </li>
-      </ul>
+          <span class="visible-xs navbar-brand">Sidebar menu</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"></li>
+            <li><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#upload-file-modal">Upload File</a></li>
+            <li><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#">Create a Folder</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
+<!-- End Side Bar -->
 
+  <div class="col-sm-9">
+    <h1>Home Directory</h1>
+    <a id="get-nodes" class="btn btn-success"><span class="glyphicon glyphicon-cloud-download"></span>Get Nodes</a>
+    <div id="all-nodes" class="all-nodes" data-spy="scroll" data-target=".header" >
+    </div>
+    <div class="row drop-zone">
+      <p>(will be drop zone)</p>
+    </div>
   </div>
 </div>
-End of Side Bar -->
-<div class="container-fluid">
-    <div class="row row-offcanvas row-offcanvas-left">
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-            <div class="sidebar-nav">
-                <ul class="nav">
-                    <li>
-                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#upload-file-modal">
-                        Upload File
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#">
-                        Add Folder
-                      </button>
-                    </li>
-                </ul>
-            </div>
-            <!--/.well -->
-        </div>
-        <!--/span-->
-
-        <div class="col-xs-12 col-sm-9">
-            <div class="row">
-
-                <div class="col-6 col-sm-6 col-lg-4">
-                    <h2>Nodes here?</h2>
-                    <a id="get-nodes" class="btn btn-success"><span class="glyphicon glyphicon-cloud-download"></span>Get Nodes</a>
-                </div>
-
-                <div class="col-6 col-sm-6 col-lg-4">
-                    <h2>Place them here?</h2>
-                    <div id="all-nodes" class="all-nodes" data-spy="scroll" data-target=".header" >
-                    </div>
-                </div>
-                <!--/span-->
-            </div>
-            <!--/row-->
-        </div>
-        <!--/span-->
 
 
-    </div>
-    <!--/row-->
 
 
 
