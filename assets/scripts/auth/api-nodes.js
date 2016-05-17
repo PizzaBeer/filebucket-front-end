@@ -3,10 +3,10 @@
 const app = require('../app-data');
 const display = require('../display');
 
-const uploadFile = (success, failure, data) => {
+const uploadNode = (success, failure, data) => {
   $.ajax({
       method: 'POST',
-      url: app.server.api + '/files',
+      url: app.server.api + '/nodes',
       dataType: 'json',
       processData: false,
       contentType: false,
@@ -18,22 +18,22 @@ const uploadFile = (success, failure, data) => {
     .fail(failure);
 };
 
-const getAllFiles = function(success, failure) {
+const getAllNodes = function(success, failure) {
   $.ajax({
-      url: app.server.api + '/files',
+      url: app.server.api + '/nodes',
       headers: {
         Authorization: 'Token token=' + app.currentUser.token,
       },
     }).done((data) => {
-      display.displayAllFiles(data);
+      display.displayAllNodes(data);
     })
     .fail(failure);
 };
 
-const editFile = function(success, failure, data, fileId) {
+const editNode = function(success, failure, data, nodeId) {
   $.ajax({
     method: "PATCH",
-    url: app.server.api + '/files/' + fileId,
+    url: app.server.api + '/nodes/' + nodeId,
     data,
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
@@ -43,11 +43,11 @@ const editFile = function(success, failure, data, fileId) {
    .fail(failure);
 };
 
-const deleteFile = function(success, failure, fileId) {
-  console.log(fileId);
+const deleteNode = function(success, failure, nodeId) {
+  console.log(nodeId);
   $.ajax({
     method: "DELETE",
-    url: app.server.api + '/files/' + fileId,
+    url: app.server.api + '/nodes/' + nodeId,
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
     },
@@ -56,23 +56,9 @@ const deleteFile = function(success, failure, fileId) {
    .fail(failure);
 };
 
-
-const getAllFolders = function(success, failure) {
-  $.ajax({
-      url: app.server.api + '/folders',
-      headers: {
-        Authorization: 'Token token=' + app.currentUser.token,
-      },
-    }).done((data) => {
-      display.displayAllFolders(data);
-    })
-    .fail(failure);
-};
-
 module.exports = {
-  uploadFile,
-  getAllFiles,
-  editFile,
-  deleteFile,
-  getAllFolders
+  uploadNode,
+  getAllNodes,
+  editNode,
+  deleteNode,
 };
