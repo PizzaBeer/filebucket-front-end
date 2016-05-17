@@ -5,7 +5,6 @@ const displayAllFiles = function(files) {
   $('.all-files').html(allFilesTemplate({
     files : files.files
   }));
-  $('.modal-trigger').leanModal();
 };
 
 module.exports = {
