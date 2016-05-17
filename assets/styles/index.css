@@ -1,5 +1,6 @@
 body, html {
-  background: url(http://fullhdpictures.com/wp-content/uploads/2016/05/HD-Cloud-Wallpapers.jpg);
+  /*background: url(http://fullhdpictures.com/wp-content/uploads/2016/05/HD-Cloud-Wallpapers.jpg);*/
+  background-color: #D3D3D3;
 }
 
 .container {
@@ -41,6 +42,10 @@ td {
 
 .nav-header {
   background-image: url(http://i.imgur.com/xFFuVvv.jpg);
+}
+
+.header {
+  padding-bottom: 5%;
 }
 
 /*.bg-image {
