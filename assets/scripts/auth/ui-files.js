@@ -1,7 +1,11 @@
 'use strict';
 
+const apiFiles = require('./api-files.js');
+
 const uploadFileSuccess = () => {
   console.log('File successfully uploaded.');
+  apiFiles.getAllFiles();
+
   // will create toast/tool tip for upload success
 };
 
