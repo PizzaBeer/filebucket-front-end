@@ -61,7 +61,7 @@
           <ul class="nav navbar-nav">
             <li class="active"></li>
             <li><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#upload-file-modal">Upload File</a></li>
-            <li><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#">Create a Folder</a></li>
+            <li><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#create-folder-modal">Create a Folder</a></li>
           </ul>
         </div>
       </div>
@@ -355,13 +355,8 @@
       <div class="modal-body">
         <form id="create-folder-form">
           <div class="form-group">
-            <input id="email" type="email" class="form-control" name="credentials[email]" placeholder="Email">
+            <input id="name" type="text" class="form-control" name="node[name]" placeholder="My Folder">
           </div>
-          <div class="form-group">
-            <input id="password" type="password" class="form-control" name="credentials[password]" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <input id="password" type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
           </div>
           <button type="submit" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-folder"></span>Create Folder</button>
         </form>
