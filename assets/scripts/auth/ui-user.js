@@ -7,24 +7,24 @@ const signInSuccess = (data) => {
   app.currentUser.id = data.user._id;
   console.log(app.currentUser);
   console.log("Sign in successful");
-  $('#sign-in-modal').closeModal();
+  $('#sign-in-modal').modal('hide');
 };
 
 const signUpSuccess = (data) => {
   console.log("Sign up successful");
-  $('#sign-up-modal').closeModal();
+  $('#sign-up-modal').modal('hide');
 };
 
 const signOutSuccess = () => {
   app.currentUser = null;
   console.log(app);
   console.log("You signed out bro. Sweet!");
-  $('#sign-out-modal').closeModal();
+  $('#sign-out-modal').modal('hide');
 };
 
 const changePwSuccess = (data) => {
   console.log("Sign up successful");
-  $('#change-password-modal').closeModal();
+  $('#change-password-modal').modal('hide');
 };
 
 const success = (data) => {
