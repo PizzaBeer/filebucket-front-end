@@ -10,7 +10,6 @@ const fileEvents = require('./auth/events-files.js');
 
 $(() => {
   console.log('page loaded!');
-  $('.modal-trigger').leanModal();
   userEvents.userEventHandlers();
   fileEvents.fileEventHandlers();
 });
