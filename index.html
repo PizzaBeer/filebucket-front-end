@@ -42,7 +42,7 @@
 <!-- Main Body with buttons -->
 <div class="section container">
 
-<!-- Side Bar -->
+<!-- Side Bar
 
 <div class="row row-offcanvas row-offcanvas-left">
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
@@ -60,38 +60,58 @@
         </li>
       </ul>
     </div>
-    <!--/.well -->
+
   </div>
 </div>
-<!-- End of Side Bar -->
+End of Side Bar -->
+<div class="container-fluid">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="sidebar-nav">
+                <ul class="nav">
+                    <li>
+                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#upload-file-modal">
+                        Upload File
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#">
+                        Add Folder
+                      </button>
+                    </li>
+                </ul>
+            </div>
+            <!--/.well -->
+        </div>
+        <!--/span-->
+
+        <div class="col-xs-12 col-sm-9">
+            <div class="row">
+
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Nodes here?</h2>
+                    <a id="get-nodes" class="btn btn-success"><span class="glyphicon glyphicon-cloud-download"></span>Get Nodes</a>
+                </div>
+
+                <div class="col-6 col-sm-6 col-lg-4">
+                    <h2>Place them here?</h2>
+                    <div id="all-nodes" class="all-nodes" data-spy="scroll" data-target=".header" >
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <!--/row-->
+        </div>
+        <!--/span-->
+
+
+    </div>
+    <!--/row-->
 
 
 
-<!-- Moving to Modal
-<div class="row">
-  <div class="upload-file">
-    <form id="application-x-www-form-urlencoded" action="http://localhost:3000/files" method="post" enctype="application/x-www-form-data">
-      <div class="form-group">
-          <input type="file" name="file[file]">
-      </div>
-      <button class="btn btn-success" type="submit" name="action"><span class="glyphicon glyphicon-cloud-upload"></span>Upload</button>
-    </form>
-  </div>
-</div>
--->
 
 
-
-<div class="row">
-  <a id="get-nodes" class="btn btn-success"><span class="glyphicon glyphicon-cloud-download"></span>Get Nodes</a>
-</div>
-
-
-<div class="all-folders">
-</div>
-
-<div id="all-nodes" class="all-nodes" data-spy="scroll" data-target=".header" >
-</div>
 
 </div>
 
