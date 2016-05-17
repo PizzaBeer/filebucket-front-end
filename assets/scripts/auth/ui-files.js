@@ -17,6 +17,7 @@ const uploadFileFailure = (error) => {
 const editFileSuccess = (data) => {
   console.log(data);
   console.log('Tag successfully added');
+  apiFiles.getAllFiles();
   // will create a toast/tool tip for tag added success
 };
 
