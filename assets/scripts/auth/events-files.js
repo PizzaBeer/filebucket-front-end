@@ -45,7 +45,7 @@ const fileEventHandlers = () => {
     let fileId = $(this).attr('data-id');
     console.log('delete this => ' + fileId);
     console.log(fileId);
-    authApiFiles.deleteFile(authUi.success, authUi.failure, fileId);
+    authApiFiles.deleteFile(authUi.deleteFileSuccess, authUi.failure, fileId);
   });
 
 };

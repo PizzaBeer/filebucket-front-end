@@ -20,6 +20,11 @@ const editFileSuccess = (data) => {
   // will create a toast/tool tip for tag added success
 };
 
+const deleteFileSuccess = (data) => {
+  console.log(data);
+  console.log('Tag successfully added');
+};
+
 
 
 
@@ -35,6 +40,7 @@ module.exports = {
   uploadFileSuccess,
   uploadFileFailure,
   editFileSuccess,
+  deleteFileSuccess,
   success,
   failure,
 };
