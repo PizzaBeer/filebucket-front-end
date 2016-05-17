@@ -6,7 +6,7 @@ const display = require('../display');
 const uploadNode = (success, failure, data) => {
   $.ajax({
       method: 'POST',
-      url: app.server.api + '/nodes',
+      url: app.server.api + '/nodes/create-file',
       dataType: 'json',
       processData: false,
       contentType: false,
