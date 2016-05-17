@@ -52,9 +52,9 @@ const nodeEventHandlers = () => {
   $('#create-folder-form').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
-    data += `&node%5Bpath%5D=${appData.currentDirectory}`;
+    data += `&node%5Bpath%5D=,${appData.currentDirectory},`;
     console.log('this is data');
-    // authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
+    authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
     console.log(data);
   });
 
