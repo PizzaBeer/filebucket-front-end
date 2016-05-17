@@ -39,7 +39,7 @@ const nodeEventHandlers = () => {
     $('.delete-node-btn').attr('data-id', nodeId);
     console.log('to delete' + nodeId);
   });
-
+  
   $('.delete-node-btn').on('click', function(e) {
     e.preventDefault();
     let nodeId = $(this).attr('data-id');

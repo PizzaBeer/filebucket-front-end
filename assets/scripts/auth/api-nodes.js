@@ -69,12 +69,13 @@ const deleteNode = function(success, failure, nodeId) {
 };
 
 const createFolder = (success, failure, data) => {
+  console.log(data);
   $.ajax({
       method: 'POST',
-      url: app.server.api + '/nodes/create-folder',
+      url: app.server.api + '/create-folder',
       dataType: 'json',
       processData: false,
-      contentType: false,
+      // contentType: false,
       data,
       headers: {
         Authorization: 'Token token=' + app.currentUser.token
