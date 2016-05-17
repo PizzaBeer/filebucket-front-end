@@ -31,13 +31,14 @@ const getAllNodes = function(success, failure) {
 };
 
 const editNode = function(success, failure, data, nodeId) {
+  console.log(data);
   $.ajax({
     method: "PATCH",
     url: app.server.api + '/nodes/' + nodeId,
-    data,
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
     },
+    data: data,
   })
   .done(success)
    .fail(failure);
