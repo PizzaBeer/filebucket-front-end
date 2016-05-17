@@ -9,7 +9,10 @@ const server = {
     token:''
   };
 
+  let currentDirectory = "home";
+
 module.exports = {
   server,
-  currentUser
+  currentUser,
+  currentDirectory
 };

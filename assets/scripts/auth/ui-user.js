@@ -2,6 +2,15 @@
 
 const app = require('../app-data');
 const apiNodes = require('./api-nodes.js');
+const display = require('../display');
+
+const success = (data) => {
+  console.log(data);
+};
+
+const failure = (error) => {
+  console.error(error);
+};
 
 const signInSuccess = (data) => {
   app.currentUser.token = data.user.token;
@@ -9,6 +18,11 @@ const signInSuccess = (data) => {
   console.log(app.currentUser);
   console.log("Sign in successful");
   $('#sign-in-modal').modal('hide');
+
+  //Calls GET for User's home directory
+  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
+
+
   // apiNodes.getAllNodes(); change this to get all folders
 };
 
@@ -31,13 +45,6 @@ const changePwSuccess = (data) => {
   //THIS needs to change to hide in BS
 };
 
-const success = (data) => {
-  console.log(data);
-};
-
-const failure = (error) => {
-  console.error(error);
-};
 
 module.exports = {
   failure,
