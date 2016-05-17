@@ -2,6 +2,7 @@
 
 const app = require('../app-data');
 const apiNodes = require('./api-nodes.js');
+const display = require('../display');
 
 const success = (data) => {
   console.log(data);
@@ -19,7 +20,7 @@ const signInSuccess = (data) => {
   $('#sign-in-modal').modal('hide');
 
   //Calls GET for User's home directory
-  apiNodes.getDirectory(success, failure, app.currentDirectory)
+  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
 
 
   // apiNodes.getAllNodes(); change this to get all folders
