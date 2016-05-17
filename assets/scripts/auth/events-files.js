@@ -19,21 +19,21 @@ const fileEventHandlers = () => {
     authApiFiles.getAllFiles(display.displayAllFiles, fileUi.failure);
   });
 
-  $('#all-files').on('click', '#edit-tags', function(e) {
+  $('#all-files').on('click', '.edit-tags', function(e) {
     e.preventDefault();
     let fileId = $(e.target).attr('data-id');
-    $('.add-tag-btn').attr('data-id', fileId);
+    $('.edit-tags-btn').attr('data-id', fileId);
     console.log(fileId);
   });
 
-  $('#edit-tag-form').on('click', function(e) {
+  $('#edit-tag-form').on('submit', function(e) {
     e.preventDefault();
     let data = getFormFields(this);
-    let fileId = $('.add-tag-btn').attr('data-id');
+    let fileId = $('.edit-tags-btn').attr('data-id');
     authApiFiles.editFile(fileUi.editFileSuccess, fileUi.failure, data, fileId);
   });
 
-  $('#all-files').on('click', '#delete-file', function(e) {
+  $('#all-files').on('click', '.delete-file', function(e) {
     e.preventDefault();
     let fileId = $(e.target).attr('data-id');
     $('.delete-file-btn').attr('data-id', fileId);
@@ -42,7 +42,7 @@ const fileEventHandlers = () => {
 
   $('.delete-file-btn').on('click', function(e) {
     e.preventDefault();
-    let fileId = $(this).data("id");
+    let fileId = $(this).attr('data-id');
     console.log('delete this => ' + fileId);
     console.log(fileId);
     authApiFiles.deleteFile(authUi.success, authUi.failure, fileId);
