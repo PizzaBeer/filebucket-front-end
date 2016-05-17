@@ -9,19 +9,33 @@
 
 </head>
 
-<body class="container-fluid">
+<body class="body section">
   <!-- Navbar -->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">QLOUD.</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a>
-        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">Sign In</a>
-        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-out-modal">Sign Out</a>
-        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#change-password-modal">Change Password</a>
-      </ul>
-    </div>
-  </nav>
+
+  <div class="header">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand scroll-top">QLOUD.</a>
+        </div>
+        <!--/.navbar-header-->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a></li>
+          <li><a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">Sign In</a></li>
+          <li><a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-out-modal">Sign Out</a></li>
+          <li><a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#change-password-modal">Change Password</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- End of header-->
+
   <!-- Navbar -->
   <h1>Veggies</h1>
 
@@ -234,10 +248,10 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#sign-up-modal">Back</button>
         <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Already have an account? Sign in here.</a>
-          </div>
       </div>
     </div>
   </div>
+</div>
 <!-- End Sign Up Fail-->
 
 
