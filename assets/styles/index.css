@@ -6,6 +6,7 @@ body, html {
   position: relative;
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
   padding: 100px 0;
+  background-attachment: fixed;
 }
 
 /*Cloud Buttons seperate*/
