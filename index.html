@@ -272,22 +272,28 @@
 
 
 
-<!--Edit Tags Modal -->
-<div id="edit-tags-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- EDIT TAG MODAL -->
+
+<div id="edit-tags-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <form id="edit-tag-form">
-      <input type="text" name="file[tags]" placeholder="favorites">
-      <button class="btn btn-success" type="submit" name="action"><span class="glyphicon glyphicon-tags">Add Tag</button>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Edit Tags</h4>
+        <div class="modal-body">
+        <form id="edit-tag-form">
+          <input type="text" name="file[tags]" placeholder="favorites">
+          <button class="btn btn-success" type="submit" name="action"><span class="glyphicon glyphicon-tags">Add Tag</button>
+        </form>
+        </div>
+          <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-trash">Edit Tags</button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+    </div>
   </div>
 </div>
 <!--End Edit Tags Modal -->
 
-<!--Delete Tags Modal-->
+<!--Delete FILE Modal-->
 
 
 <div id="delete-file-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
