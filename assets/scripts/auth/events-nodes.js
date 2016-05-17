@@ -4,12 +4,14 @@ const authApiNodes = require('./api-nodes');
 const authUi = require('./ui-user');
 const display = require('../display');
 const nodeUi = require('./ui-nodes');
+const appData = require('../app-data');
 
 const nodeEventHandlers = () => {
 
   $('#application-x-www-form-urlencoded').on('submit', function(e) {
     e.preventDefault();
     let data = new FormData(this);
+    data.append('path', `,${appData.currentDirectory},`);
     authApiNodes.uploadNode(nodeUi.uploadNodeSuccess, nodeUi.uploadNodeFailure, data);
     console.log(data);
   });
@@ -47,6 +49,19 @@ const nodeEventHandlers = () => {
     console.log(nodeId);
     authApiNodes.deleteNode(nodeUi.deleteNodeSuccess, authUi.failure, nodeId);
   });
+
+  $('#create-folder-form').on('submit', function (event) {
+    event.preventDefault();
+    let data = getFormFields(this);
+    data += `&node%5Bpath%5D=,${appData.currentDirectory},`;
+    console.log('this is data');
+    authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
+    console.log(data);
+  });
+
+
+
+
 
 };
 

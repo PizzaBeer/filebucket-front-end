@@ -3,6 +3,7 @@
 const app = require('../app-data');
 const display = require('../display');
 
+// Creates Files
 const uploadNode = (success, failure, data) => {
   $.ajax({
       method: 'POST',
@@ -68,10 +69,26 @@ const deleteNode = function(success, failure, nodeId) {
    .fail(failure);
 };
 
+const createFolder = (success, failure, data) => {
+  console.log(data);
+  $.ajax({
+      method: 'POST',
+      url: app.server.api + '/create-folder',
+      dataType: 'json',
+      processData: false,
+      data,
+      headers: {
+        Authorization: 'Token token=' + app.currentUser.token
+      },
+    }).done(success)
+    .fail(failure);
+};
+
 module.exports = {
   uploadNode,
   getAllNodes,
   getDirectory,
   editNode,
   deleteNode,
+  createFolder
 };
