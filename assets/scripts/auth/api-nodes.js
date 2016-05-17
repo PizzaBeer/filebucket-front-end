@@ -75,7 +75,6 @@ const createFolder = (success, failure, data) => {
       url: app.server.api + '/create-folder',
       dataType: 'json',
       processData: false,
-      // contentType: false,
       data,
       headers: {
         Authorization: 'Token token=' + app.currentUser.token

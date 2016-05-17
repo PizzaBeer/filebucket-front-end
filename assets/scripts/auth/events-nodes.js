@@ -4,6 +4,7 @@ const authApiNodes = require('./api-nodes');
 const authUi = require('./ui-user');
 const display = require('../display');
 const nodeUi = require('./ui-nodes');
+const appData = require('../app-data');
 
 const nodeEventHandlers = () => {
 
@@ -39,7 +40,7 @@ const nodeEventHandlers = () => {
     $('.delete-node-btn').attr('data-id', nodeId);
     console.log('to delete' + nodeId);
   });
-  
+
   $('.delete-node-btn').on('click', function(e) {
     e.preventDefault();
     let nodeId = $(this).attr('data-id');
@@ -51,9 +52,12 @@ const nodeEventHandlers = () => {
   $('#create-folder-form').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
-    authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
+    data += `&node%5Bpath%5D=${appData.currentDirectory}`;
+    console.log('this is data');
+    // authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
     console.log(data);
   });
+
 
 
 
