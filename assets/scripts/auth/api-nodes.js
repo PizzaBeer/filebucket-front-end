@@ -37,9 +37,7 @@ const getDirectory = function(success, failure, id) {
       headers: {
         Authorization: 'Token token=' + app.currentUser.token,
       },
-    }).done((data) => {
-      display.displayAllNodes(data);
-    })
+    }).done(success)
     .fail(failure);
 };
 
