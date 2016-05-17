@@ -9,6 +9,21 @@ body, html {
 }
 
 .all-files {
-  background: url(http://wallpaper.zone/img/2837620.jpg);
-  background-size: contain;
+  /*background-color: #fff;*/
+  background-color: rgba(229, 235, 240, 0.6);
+}
+
+/*Cloud Buttons seperate*/
+
+.btn.btn-success {
+    color: #ffffff;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #057eff, #00eeff);
+    border-color: #2007ad #2007ad #2007ad;
+}
+.btn.btn-success:hover {
+    color: #ffffff;
+    background-color: #00eeff;
+    background-image: linear-gradient(to bottom, #00eeff, #00eeff);
+    border-color: #2007ad #2007ad #2007ad;
 }
