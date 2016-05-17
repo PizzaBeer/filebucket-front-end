@@ -1,4 +1,4 @@
-<table class="centered striped bordered file" id="file-table">
+<table class="files-table" id="file-table">
   <thead>
     <tr>
       <th data-field="name">File Name</th>
@@ -9,12 +9,14 @@
   </thead>
   <tbody>
     {{#files}}
-      <tr>
+      <tr class="all-files-row">
         <td>{{this.name}}</td>
         <td>{{this.updated_at}}</td>
         <td>{{this.path}}</td>
-        <td><a class="waves-effect waves-light btn modal-trigger" data-id="{{this._id}}" href="#edit-tags-modal" id="edit-tags">Edit Tags</a></td>
-        <td><a id="delete-file" class="waves-effect waves-light btn modal-trigger" data-id="{{this._id}}" href="#delete-file-modal" >Delete File</a></td>
+        {{!-- <td><a class="btn modal-trigger" data-id="{{this._id}}"href="#edit-tags-modal" id="edit-tags">Edit Tags</a></td> --}}
+        {{!-- <td><a id="delete-file" class="btn modal-trigger" data-id="{{this._id}}" href="#delete-file-modal" >Delete File</a></td> --}}
+        <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#edit-file-modal" data-id="{{this._id}}" id="edit-tags"><span class="glyphicon glyphicon-tags"></span> Edit Tags</button></td>
+        <td><button type="button" class="btn btn-trash" data-toggle="modal" data-target="#delete-file-modal" data-id="{{this._id}}" id="delete-file"><span class="glyphicon glyphicon-trash"></span> Delete File</button></td>
       </tr>
     {{/files}}
   </tbody>

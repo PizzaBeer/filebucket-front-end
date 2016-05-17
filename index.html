@@ -6,15 +6,18 @@
 
   <script src="vendor.bundle.js" type="text/javascript" charset="utf-8"></script>
   <script src="bundle.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="assets/styles/index.css" rel="stylesheet">
+
 
 </head>
 
 <body class="body section">
-  <!-- Navbar -->
 
+  <!-- Navbar -->
   <div class="header">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid nav-header">
         <div class="navbar-header">
           <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
             <span class="sr-only">Toggle navigation</span>
@@ -26,21 +29,29 @@
         </div>
         <!--/.navbar-header-->
         <ul class="nav navbar-nav navbar-right">
-          <li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button></li>
-          <li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">Sign In</button></li>
-          <li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-out-modal">Sign Out</button></li>
-          <li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#change-password-modal">Change Password</button></li>
+          <li><button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sign-up-modal"><span class="glyphicon glyphicon-cloud"></span>Sign Up</button></li>
+          <li><button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sign-in-modal"><span class="glyphicon glyphicon-cloud"></span> Sign In</button></li>
+          <li><button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#sign-out-modal"><span class="glyphicon glyphicon-cloud"></span>Sign Out</button></li>
+          <li><button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#change-password-modal"><span class="glyphicon glyphicon-cloud"></span>Change Password</button></li>
         </ul>
       </div>
     </nav>
+  </div>
+
+
 
 
 
 
   <!-- End of header-->
 
-  <!-- Navbar -->
-<div class="body container">
+
+<!-- Main Body with buttons -->
+
+
+
+<!-- !MAIN BODY WITH BUTTONS --->
+<div class="body container ">
 <div class="row">
   <div class="upload-file">
     <form id="application-x-www-form-urlencoded" action="http://localhost:3000/files" method="post" enctype="application/x-www-form-data">
@@ -48,25 +59,32 @@
           <label for="exampleInputFile">File</label>
           <input type="file" name="file[file]">
       </div>
-      <button class="btn btn-default" type="submit" name="action">Upload
-      </button>
+      <button class="btn btn-success" type="submit" name="action"><span class="glyphicon glyphicon-cloud-upload"></span>Upload</button>
     </form>
   </div>
 </div>
 
 
 
+
   <div class="row">
-    <a id="get-files" class="waves-effect waves-light btn">Get Files</a>
+    <a id="get-files" class="btn btn-success"><span class="glyphicon glyphicon-cloud-download"></span>Get Files</a>
+  </div>
+
+  <div class="bg-image">
   </div>
 
   <div class="all-folders">
   </div>
 
-  <div id="all-files" class="all-files">
+  <div id="all-files" class="all-files" data-spy="scroll" data-target=".header" >
   </div>
 
 </div>
+
+
+
+
 </body>
 
 
@@ -96,7 +114,7 @@
           <div class="form-group">
             <input id="password" type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
           </div>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up</button>
+          <button type="submit" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud"></span>Sign Up</button>
         </form>
       </div>
       <div class="modal-footer">
@@ -105,6 +123,7 @@
     </div>
   </div>
 </div>
+
 
 
 
@@ -126,7 +145,7 @@
           <div class="form-group">
             <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-primary" id="btn-submit">Sign In</button>
+          <button id="btn-submit" type="submit" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-cloud"></span> Sign In</button>
         </form>
         <!--End Sign In Form -->
       </div>
@@ -262,22 +281,31 @@
     </form>
   </div>
   <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
   </div>
 </div>
 <!--End Edit Tags Modal -->
 
-<!--Delete Tags Modal -->
-<div id="delete-file-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-content">
-    <h2> Are you sure you want to delete this file? FOREVER??</h2>
-    <button class="btn waves-effect waves-red delete-file-btn" type="submit" name="action">DESTROY</button>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+<!--Delete Tags Modal-->
+
+
+<div id="delete-file-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Delete File</h4>
+      </div>
+      <div class="modal-body">
+        <h2> Are you sure you want to delete this forever? FOREVER?</h2>
+          <button type="button" class="btn btn-trash delete-file-btn"><span class="glyphicon glyphicon-trash">Sign In</button>
+      </div>
+    </div>
   </div>
 </div>
-<!--End Delete Tags Modal -->
+<!--End Delete File Modal -->
+
+
 
 
 

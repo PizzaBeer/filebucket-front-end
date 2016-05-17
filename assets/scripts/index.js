@@ -13,3 +13,7 @@ $(() => {
   userEvents.userEventHandlers();
   fileEvents.fileEventHandlers();
 });
+
+$('body').scrollspy({
+    target: '.navbar-fixed-top'
+});
