@@ -41,6 +41,10 @@ td {
   padding-left: 5px;
 }
 
+.nav-header {
+  background-image: url(http://i.imgur.com/xFFuVvv.jpg);
+}
+
 /*.bg-image {
   background-image: url(http://i.imgur.com/xFFuVvv.jpg);
   opacity: 0.6;
