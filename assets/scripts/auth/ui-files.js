@@ -14,16 +14,16 @@ const uploadFileFailure = (error) => {
   // will create a modal for upload fail
 };
 
-const editFileSuccess = (data) => {
-  console.log(data);
+const editFileSuccess = () => {
   console.log('Tag successfully added');
   apiFiles.getAllFiles();
   // will create a toast/tool tip for tag added success
 };
 
-const deleteFileSuccess = (data) => {
-  console.log(data);
-  console.log('Tag successfully added');
+const deleteFileSuccess = () => {
+  debugger;
+  console.log('File successfully deleted');
+  apiFiles.getAllFiles();
 };
 
 
