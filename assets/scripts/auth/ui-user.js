@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../app-data');
+const apiFiles = require('./api-files.js');
 
 const signInSuccess = (data) => {
   app.currentUser.token = data.user.token;
@@ -8,6 +9,7 @@ const signInSuccess = (data) => {
   console.log(app.currentUser);
   console.log("Sign in successful");
   $('#sign-in-modal').modal('hide');
+  // apiFiles.getAllFiles(); change this to get all folders
 };
 
 const signUpSuccess = (data) => {
