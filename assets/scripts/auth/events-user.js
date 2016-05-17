@@ -2,7 +2,7 @@
 
 
 const authApi = require('./api-user');
-const authApiFiles = require('./api-files');
+const authApiNodes = require('./api-nodes');
 const authUi = require('./ui-user');
 
 
