@@ -274,10 +274,11 @@
 
 <!--Edit Tags Modal -->
 <div id="edit-tags-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
   <div class="modal-content">
     <form id="edit-tag-form">
       <input type="text" name="file[tags]" placeholder="favorites">
-      <button class="btn waves-effect waves-light add-tag-btn" type="submit" name="action">Add Tag</button>
+      <button class="btn btn-success" type="submit" name="action"><span class="glyphicon glyphicon-tags">Add Tag</button>
     </form>
   </div>
   <div class="modal-footer">
@@ -298,7 +299,7 @@
       </div>
       <div class="modal-body">
         <h2> Are you sure you want to delete this forever? FOREVER?</h2>
-          <button type="button" class="btn btn-trash delete-file-btn"><span class="glyphicon glyphicon-trash">Sign In</button>
+          <button type="button" class="btn btn-trash delete-file-btn"><span class="glyphicon glyphicon-trash">Delete File</button>
       </div>
     </div>
   </div>
