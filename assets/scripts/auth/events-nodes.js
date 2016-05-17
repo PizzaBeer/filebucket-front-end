@@ -48,6 +48,16 @@ const nodeEventHandlers = () => {
     authApiNodes.deleteNode(nodeUi.deleteNodeSuccess, authUi.failure, nodeId);
   });
 
+  $('#create-folder-form').on('submit', function (event) {
+    event.preventDefault();
+    let data = getFormFields(this);
+    authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
+    console.log(data);
+  });
+
+
+
+
 };
 
 module.exports = {

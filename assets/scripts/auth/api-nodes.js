@@ -68,10 +68,26 @@ const deleteNode = function(success, failure, nodeId) {
    .fail(failure);
 };
 
+const createFolder = (success, failure, data) => {
+  $.ajax({
+      method: 'POST',
+      url: app.server.api + '/nodes/create-folder',
+      dataType: 'json',
+      processData: false,
+      contentType: false,
+      data,
+      headers: {
+        Authorization: 'Token token=' + app.currentUser.token
+      },
+    }).done(success)
+    .fail(failure);
+};
+
 module.exports = {
   uploadNode,
   getAllNodes,
   getDirectory,
   editNode,
   deleteNode,
+  createFolder
 };
