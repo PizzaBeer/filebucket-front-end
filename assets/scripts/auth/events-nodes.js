@@ -11,6 +11,7 @@ const nodeEventHandlers = () => {
   $('#application-x-www-form-urlencoded').on('submit', function(e) {
     e.preventDefault();
     let data = new FormData(this);
+    data.append('path', `,${appData.currentDirectory},`);
     authApiNodes.uploadNode(nodeUi.uploadNodeSuccess, nodeUi.uploadNodeFailure, data);
     console.log(data);
   });

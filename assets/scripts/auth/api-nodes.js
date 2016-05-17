@@ -3,6 +3,7 @@
 const app = require('../app-data');
 const display = require('../display');
 
+// Creates Files
 const uploadNode = (success, failure, data) => {
   $.ajax({
       method: 'POST',
