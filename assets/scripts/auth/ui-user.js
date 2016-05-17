@@ -25,6 +25,8 @@ const signOutSuccess = () => {
 const changePwSuccess = (data) => {
   console.log("Sign up successful");
   $('#change-password-modal').modal('hide');
+  $('#change-password-modal').closeModal();
+  //THIS needs to change to hide in BS
 };
 
 const success = (data) => {
