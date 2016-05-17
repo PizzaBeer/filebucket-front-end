@@ -1,64 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>FileBucket</title>
 
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8"></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8"></script>
+<head>
+  <title>FileBucket</title>
 
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js" defer></script>
+  <script src="vendor.bundle.js" type="text/javascript" charset="utf-8"></script>
+  <script src="bundle.js" type="text/javascript" charset="utf-8"></script>
 
-    </head>
-    <body class="container-fluid">
-<!-- Navbar -->
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">QLOUD.</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <a class="waves-effect waves-light btn modal-trigger" href="#sign-up-modal">Sign Up</a>
-              <a class="waves-effect waves-light btn modal-trigger" href="#sign-in-modal">Sign In</a>
-              <a class="waves-effect waves-light btn modal-trigger" href="#sign-out-modal">Sign Out</a>
-              <a class="waves-effect waves-light btn modal-trigger" href="#change-password-modal">Change Password</a>
-          </ul>
+</head>
+
+<body class="container-fluid">
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">QLOUD.</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a>
+        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">Sign In</a>
+        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-out-modal">Sign Out</a>
+        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#change-password-modal">Change Password</a>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  <h1>Veggies</h1>
+
+  <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water
+    spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori
+    azuki bean chickweed potato bell pepper artichoke.</p>
+
+  <div class="upload-file">
+    <form id="application-x-www-form-urlencoded" action="http://localhost:3000/files" method="post" enctype="application/x-www-form-data">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" name="file[file]">
         </div>
-      </nav>
-<!-- Navbar -->
-      <h1>Veggies</h1>
-
-      <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
-
-    <div class="upload-file">
-      <form id="application-x-www-form-urlencoded" action="http://localhost:3000/files" method="post" enctype="application/x-www-form-data">
-        <div class="file-field input-field">
-          <div class="btn">
-            <span>File</span>
-            <input type="file" name="file[file]">
-          </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text">
-          </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Upload
-        </button>
-      </form>
-    </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Upload
+      </button>
+    </form>
+  </div>
 
 
-    <div class="row">
-      <a id="get-files" class="waves-effect waves-light btn">Get Files</a>
-    </div>
+  <div class="row">
+    <a id="get-files" class="waves-effect waves-light btn">Get Files</a>
+  </div>
 
-    <div class="all-folders">
-    </div>
+  <div class="all-folders">
+  </div>
 
-    <div id="all-files" class="all-files">
-    </div>
+  <div id="all-files" class="all-files">
+  </div>
 
 
-    </body>
+</body>
 
 
 
@@ -67,25 +66,33 @@
 
 <!-- Modals -->
 
+
 <!-- Sign Up -->
-<div id="sign-up-modal" class="modal">
-  <div class="modal-content">
-    <h4>Sign Up</h4>
-      <form id="sign-up">
-        <div class="form-group">
-          <input id="email" type="email" class="validate" name="credentials[email]" placeholder="Email" >
-        </div>
-        <div class="form-group">
-          <input id="password" type="password" class="validate" name="credentials[password]" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <input id="password" type="password" class="validate" name="credentials[password_confirmation]" placeholder="Password">
-        </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up</button>
-      </form>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Already have an account? Sign in here</a>
+<div id="sign-up-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Sign-Up</h4>
+      </div>
+      <div class="modal-body">
+        <form id="sign-up">
+          <div class="form-group">
+            <input id="email" type="email" class="form-control" name="credentials[email]" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input id="password" type="password" class="form-control" name="credentials[password]" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input id="password" type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
+          </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="sign-in-modal">Already have an account? Sign in here</a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -93,63 +100,155 @@
 
 
 <!-- Sign In -->
-<div id="sign-in-modal" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-      <form id="sign-in">
-        <div class="form-group">
-          <input id="email" type="email" class="validate" name="credentials[email]" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <input id="password" type="password" class="validate" name="credentials[password]" placeholder="Password">
-        </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Sign In</button>
-      </form>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Need to create an account? Sign up here</a>
-  </div>
-</div>
-
-<!-- Change Password -->
-<div id="change-password-modal" class="modal">
-  <div class="modal-content">
-    <h4>Change Password</h4>
-      <form id="change-password">
-        <div class="form-group">
-          <input id="password" type="password" class="validate" name="passwords[old]" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <input id="password" type="password" class="validate" name="passwords[new]" placeholder="Password">
-        </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Change Password</button>
-      </form>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-  </div>
-</div>
-
-<!-- Sign Out -->
-<div id="sign-out-modal" class="modal">
-  <div class="modal-content">
-    <h4>Sign Out</h4>
-    <form id="sign-out">
-      <button class="btn waves-effect waves-light" type="submit" name="action">Sign Out</button>
-    </form>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Log In</h4>
+      </div>
+      <div class="modal-body">
+        <!--Sign In Form -->
+        <form id="sign-in">
+          <div class="form-group">
+            <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-submit">Sign In</button>
+        </form>
+        <!--End Sign In Form -->
+      </div>
+      <div class="modal-footer">
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-up-modal">Need to create an account? Sign up here.</a>
+      </div>
     </div>
   </div>
 </div>
 
 
+
+
+<!-- Modal Change Password-->
+<div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">change password title</h4>
+      </div>
+      <div class="modal-body">
+        <!--Change Password Form -->
+        <form id="change-password">
+          <div class="form-group">
+            <input type="password" name="passwords[old]" class="form-control" id="exampleInputPassword1" placeholder="Current Password">
+          </div>
+          <div class="form-group">
+            <input type="password" name="passwords[new]" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-submit">change password</button>
+        </form>
+        <!--End Change Password Form -->
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sign Out Modal -->
+<div class="modal fade" id="sign-out-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Are you sure you want to sign out?</h4>
+      </div>
+      <div class="modal-body">
+        <form id="sign-out">
+          <button type="submit" class="btn btn-primary" id="btn-logout">Sign Out</button>
+          <a href="#" data-dismiss="modal" data-toggle="modal">cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Change Password Success-->
+<div class="modal fade" id="change-password-success-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Password Changed</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">let's see</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal Change Password Success-->
+
+<!-- Modal Change Password Fail-->
+<div class="modal fade" id="change-password-fail-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Password Not Changed</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">let's see</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Change Password Fail-->
+
+<!-- Sign In Fail-->
+<div class="modal fade" id="sign-in-fail-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">The email address and password you entered did not match our records. Please double-check and try again!</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Sign In Fail-->
+
+<!-- Sign Up Fail-->
+<div class="modal fade" id="sign-up-fail-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">The email address you entered has already been taken.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#sign-up-modal">Back</button>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Already have an account? Sign in here.</a>
+          </div>
+      </div>
+    </div>
+  </div>
+<!-- End Sign Up Fail-->
+
+
+
+
 <!--Edit Tags Modal -->
-<div id="edit-tags-modal" class="modal">
+<div id="edit-tags-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-content">
     <form id="edit-tag-form">
-        <input type="text" name="file[tags]" placeholder="favorites">
-        <button class="btn waves-effect waves-light add-tag-btn" type="submit" name="action">Add Tag</button>
+      <input type="text" name="file[tags]" placeholder="favorites">
+      <button class="btn waves-effect waves-light add-tag-btn" type="submit" name="action">Add Tag</button>
     </form>
   </div>
   <div class="modal-footer">
@@ -159,10 +258,10 @@
 <!--End Edit Tags Modal -->
 
 <!--Delete Tags Modal -->
-<div id="delete-file-modal" class="modal">
+<div id="delete-file-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-content">
-        <h2> Are you sure you want to delete this file? FOREVER??</h2>
-        <button class="btn waves-effect waves-red delete-file-btn" type="submit" name="action">DESTROY</button>
+    <h2> Are you sure you want to delete this file? FOREVER??</h2>
+    <button class="btn waves-effect waves-red delete-file-btn" type="submit" name="action">DESTROY</button>
   </div>
   <div class="modal-footer">
     <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat">Close</a>
