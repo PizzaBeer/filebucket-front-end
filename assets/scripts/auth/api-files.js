@@ -57,10 +57,22 @@ const deleteFile = function(success, failure, fileId) {
 };
 
 
+const getAllFolders = function(success, failure) {
+  $.ajax({
+      url: app.server.api + '/folders',
+      headers: {
+        Authorization: 'Token token=' + app.currentUser.token,
+      },
+    }).done((data) => {
+      display.displayAllFolders(data);
+    })
+    .fail(failure);
+};
 
 module.exports = {
   uploadFile,
   getAllFiles,
   editFile,
-  deleteFile
+  deleteFile,
+  getAllFolders
 };
