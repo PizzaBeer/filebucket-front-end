@@ -30,6 +30,19 @@ const getAllNodes = function(success, failure) {
     .fail(failure);
 };
 
+//Retrieve directory of the User
+const getDirectory = function(success, failure, id) {
+  $.ajax({
+      url: app.server.api + '/nodes/' + id,
+      headers: {
+        Authorization: 'Token token=' + app.currentUser.token,
+      },
+    }).done((data) => {
+      display.displayAllNodes(data);
+    })
+    .fail(failure);
+};
+
 const editNode = function(success, failure, data, nodeId) {
   console.log(data);
   $.ajax({
@@ -60,6 +73,7 @@ const deleteNode = function(success, failure, nodeId) {
 module.exports = {
   uploadNode,
   getAllNodes,
+  getDirectory,
   editNode,
   deleteNode,
 };
