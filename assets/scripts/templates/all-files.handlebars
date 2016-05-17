@@ -9,12 +9,12 @@
   </thead>
   <tbody>
     {{#files}}
-      <tr>
+      <tr class="all-files-style">
         <td>{{this.name}}</td>
         <td>{{this.updated_at}}</td>
         <td>{{this.path}}</td>
-        <td><a class="waves-effect waves-light btn modal-trigger" data-id="{{this._id}}" href="#edit-tags-modal" id="edit-tags">Edit Tags</a></td>
-        <td><a id="delete-file" class="waves-effect waves-light btn modal-trigger" data-id="{{this._id}}" href="#delete-file-modal" >Delete File</a></td>
+        <td><a class="btn modal-trigger" data-id="{{this._id}}" href="#edit-tags-modal" id="edit-tags">Edit Tags</a></td>
+        <td><a id="delete-file" class="btn modal-trigger" data-id="{{this._id}}" href="#delete-file-modal" >Delete File</a></td>
       </tr>
     {{/files}}
   </tbody>
