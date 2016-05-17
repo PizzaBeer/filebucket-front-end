@@ -21,7 +21,6 @@ const editFileSuccess = () => {
 };
 
 const deleteFileSuccess = () => {
-  debugger;
   console.log('File successfully deleted');
   apiFiles.getAllFiles();
 };
