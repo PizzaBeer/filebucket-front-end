@@ -1,0 +1,18 @@
+<table class="centered striped bordered folder">
+  <thead>
+    <tr>
+      <th data-field="name">Folder Name</th>
+      <th data-field="modified">Last Modified</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#folders}}
+      <tr>
+        <td>
+          <a href="{{this.location}}" target="#" data-depth="{{this.commaDepth}}" data-id="{{this._id}}" data-path="{{this.path}}">{{this.name}}</a>
+        </td>
+        <td>{{this.updated_at}}</td>
+      </tr>
+    {{/folders}}
+  </tbody>
+</table>
