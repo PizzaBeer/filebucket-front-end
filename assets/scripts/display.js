@@ -1,7 +1,6 @@
 'use strict';
 
 const displayAllNodes = function(nodes) {
-  console.log(nodes);
   let allNodesTemplate = require('./templates/all-nodes.handlebars');
   $('#all-nodes').html(allNodesTemplate({
     nodes: nodes.nodes
