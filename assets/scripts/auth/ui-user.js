@@ -22,6 +22,9 @@ const signInSuccess = (data) => {
   $('.page-content').removeClass('hidden');
   $('.landing-header').addClass('hidden');
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
+  $('.upload-form').each(function(){
+    this.reset();
+});
 };
 
 const signInFailure = (error) => {
