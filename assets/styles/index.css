@@ -6,6 +6,14 @@ body {
   padding-top: 50px;
 }
 
+a {
+  color: #4B864C;
+}
+
+a:hover {
+  color: #3C763D
+}
+
 .modal-title {
   text-transform: uppercase;
 }
@@ -30,6 +38,13 @@ body {
   text-align: center;
 }
 
+.glyphicon-folder-open {
+
+}
+
+.glyphicon-file {
+
+}
 
 .landing-header a{
   color: #ffffff;
@@ -74,11 +89,12 @@ body {
     top: 0;
     width: 250px;
     margin: 0;
-    padding: 0;
+    padding-top: 20%;
     list-style: none;
 }
 
 .sidebar-nav li {
+    padding-bottom: 10px;
     text-indent: 20px;
     line-height: 40px;
 }
@@ -126,13 +142,13 @@ body {
     color: #ffffff;
     background-color: #ffffff;
     background-image: linear-gradient(to bottom, #057eff, #00eeff);
-    border-color: #2007ad #2007ad #2007ad;
+    border-color: transparent;
 }
 .btn.btn-success:hover {
     color: #ffffff;
     background-color: #00eeff;
     background-image: linear-gradient(to bottom, #00eeff, #00eeff);
-    border-color: #2007ad #2007ad #2007ad;
+    border-color: transparent;
 }
 
 
@@ -145,6 +161,18 @@ body {
     border: 1px solid #ddd;
     width: 100px;
     height: 50px;
+}
+
+.edit-tags {
+  color: #3C763D;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-trash {
+  color: #000;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 td {
