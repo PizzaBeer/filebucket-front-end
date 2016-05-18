@@ -43,8 +43,6 @@ const signUpFailure = (error) => {
   console.error(error);
   $('#sign-up-modal').modal('hide');
   $('#sign-up-fail-modal').modal('show');
-
-
 };
 
 
@@ -73,11 +71,19 @@ const changePwSuccess = (data) => {
 });
 };
 
+const changePwFailure = (error) => {
+  console.error(error);
+  $('#change-password-modal').modal('hide');
+  $('#change-password-fail-modal').modal('show');
+};
+
+
 
 module.exports = {
   failure,
   success,
   changePwSuccess,
+  changePwFailure,
   signUpSuccess,
   signUpFailure,
   signOutSuccess,
