@@ -56,7 +56,7 @@ const nodeEventHandlers = () => {
     authApiNodes.deleteNode(nodeUi.deleteNodeSuccess, nodeUi.failure, nodeId);
   });
 
-  $('#create-folder-form').on('submit', function (event) {
+  $('#create-folder-form').on('submit', function(event) {
     event.preventDefault();
     let data = getFormFields(this);
     data += `&node%5Bpath%5D=,${app.currentDirectory},`;
@@ -84,25 +84,24 @@ const nodeEventHandlers = () => {
       $('.breadcrumb').append(`<li class="child active">${$(e.target).text()}</li>`);
     }
   });
-
-
-      $('.breadcrumb').on('click', function(e){
-        e.preventDefault();
-        let name = $(e.target).text();
-        if(name === 'Home') {
-          app.currentDirectory = 'home';
-          authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
-          traverseBreadcrumb(e);
-        }
-        else {
-          let search = new RegExp(`^(.*?)${name}`);
-          let result = app.currentDirectory.match(search);
-          app.currentDirectory = result[0];
-          authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
-          traverseBreadcrumb(e);
-        }
-
-      });
+  $('.breadcrumb').on('click', function(e) {
+    e.preventDefault();
+    let name = $(e.target).text();
+    let homeWrapper = $(e.target).prop("tagName");
+    if (name === 'Home' && homeWrapper === 'A') {
+      app.currentDirectory = 'home';
+      authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
+      traverseBreadcrumb(e);
+    } else {
+      let search = new RegExp(`^(.*?)${name}`);
+      let result = app.currentDirectory.match(search);
+      if (result) {
+        app.currentDirectory = result[0];
+        authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
+        traverseBreadcrumb(e);
+      }
+    }
+  });
 };
 
 module.exports = {
