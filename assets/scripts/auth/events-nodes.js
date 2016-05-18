@@ -68,7 +68,7 @@ const nodeEventHandlers = () => {
     } else if (dataType === "folder") {
       appData.currentDirectory += `,${$(e.target).text()}`;
       console.log(appData.currentDirectory);
-
+      authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
     }
   });
 };
