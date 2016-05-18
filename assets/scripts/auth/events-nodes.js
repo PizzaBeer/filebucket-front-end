@@ -70,6 +70,9 @@ const nodeEventHandlers = () => {
       appData.currentDirectory += `,${$(e.target).text()}`;
       authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
 
+      let text = $('.breadcrumb .active').text();
+      $('.breadcrumb .active').empty();
+      $('.breadcrumb .active').append(`<a href="#">${text}</a>`);
       $('.breadcrumb .active').removeClass();
       $('.breadcrumb').append(`<li class="active">${$(e.target).text()}</li>`);
 
