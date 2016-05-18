@@ -29,10 +29,11 @@ const signInSuccess = (data) => {
 const signUpSuccess = (data) => {
   console.log("Sign up successful");
   $('#sign-up-modal').modal('hide');
-  $('#sign-up-form').each(function(){
+  $('#sign-up').each(function(){
     this.reset();
 });
 };
+
 
 const signOutSuccess = () => {
   app.currentUser = null;
