@@ -3,6 +3,7 @@
 const app = require('../app-data');
 const apiNodes = require('./api-nodes.js');
 const display = require('../display');
+const authApi = require('./api-user');
 
 const success = (data) => {
   console.log(data);
@@ -22,6 +23,9 @@ const signInSuccess = (data) => {
   $('.page-content').removeClass('hidden');
   $('.landing-header').addClass('hidden');
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
+  $('.upload-form').each(function(){
+    this.reset();
+});
 };
 
 const signInFailure = (error) => {
@@ -37,6 +41,8 @@ const signUpSuccess = (data) => {
   $('#sign-up').each(function(){
     this.reset();
   });
+  console.log(app.server.signUpData);
+  authApi.signIn(signInSuccess, signInFailure, app.server.signUpData);
 };
 
 const signUpFailure = (error) => {

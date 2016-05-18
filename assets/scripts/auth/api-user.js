@@ -2,26 +2,27 @@
 
 const app = require('../app-data');
 
+const signIn = (success, failure, data) => {
+  $.ajax({
+    method: "POST",
+    url: app.server.api + '/sign-in',
+    data,
+  })
+  .done(success, data)
+  .fail(failure);
+};
+
 const signUp = (success, failure, data) => {
   $.ajax({
     method: "POST",
     url: app.server.api + '/sign-up',
     data,
   })
-  .done(success)
-   .fail(failure);
-  };
-
-const signIn = (success, failure, data) => {
-  $.ajax({
-    method: "POST",
-    url: app.server.api + '/sign-in',
-    data,
-    dataProcessing: false,
-  })
-  .done(success)
-   .fail(failure);
+  .done(success, data)
+  .fail(failure);
 };
+
+
 
 const signOut = (success, failure, data) => {
   $.ajax({
