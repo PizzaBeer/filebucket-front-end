@@ -4,6 +4,7 @@
 const authApi = require('./api-user');
 // const authApiNodes = require('./api-nodes'); Not being used ATM
 const authUi = require('./ui-user');
+const app = require('../app-data');
 
 
 
@@ -12,6 +13,7 @@ const userEventHandlers = () => {
   $('#sign-up').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
+    app.server.signUpData = getFormFields(this);
     authApi.signUp(authUi.signUpSuccess, authUi.signUpFailure, data);
   });
 
