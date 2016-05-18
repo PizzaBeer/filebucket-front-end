@@ -63,9 +63,11 @@
 
 ## ![WireFrames](https://i.gyazo.com/0ccac675be470898568f60699475d4d7.png)
 
-[![Ben Adamski](https://avatars1.githubusercontent.com/u/16841950?v=3&s=460)](https://www.benjamski.com) | [![Natalie Djerf](https://avatars3.githubusercontent.com/u/17814071?v=3&s=460)](https://github.com/natdjerf) | [![Roberto DelValle](https://avatars1.githubusercontent.com/u/17518260?v=3&s=400)](https://github.com/rdelvallej32) | ![Zachary Simpson](https://avatars2.githubusercontent.com/u/9722944?v=3&s=400)
+[![Ben Adamski](https://avatars1.githubusercontent.com/u/16841950?v=3&s=460)](https://github.com/benjamski) | [![Natalie Djerf](https://avatars3.githubusercontent.com/u/17814071?v=3&s=460)](https://github.com/natdjerf) | [![Roberto DelValle](https://avatars1.githubusercontent.com/u/17518260?v=3&s=400)](https://github.com/rdelvallej32) | [![Zachary Simpson](https://avatars2.githubusercontent.com/u/9722944?v=3&s=400)](https://github.com/cuprous)
 ---|---|---
-[Ben Adamski](https://benjamski.com) | [Natalie Djerf](https://github.com/natdjerf) | [Roberto DelValle](https://github.com/cuprous) | [Zachary Simpson]
+[Ben Adamski](https://benjamski.com) | [Natalie Djerf](https://github.com/natdjerf) | [Roberto DelValle](https://github.com/rdelvallej32) | [Zachary Simpson](https://github.com/cuprous)
+GH[Ben Adamski]
+
 
 © 2016+, [General Assembly, Inc.](http://generalassemb.ly) [MIT License].<br>
 
