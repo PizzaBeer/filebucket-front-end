@@ -81,6 +81,8 @@
 10. As a user, I want my files accessible only to me.
 11. As a user, I want to search by tags.
 12. As a user, I want to be able to add tags to my files.
+13. As a user, I want all my files to show upon login, and be able to navigate
+through folders and files in a way that's easy to understand.
 
 
 
