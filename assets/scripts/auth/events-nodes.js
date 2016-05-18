@@ -4,7 +4,7 @@ const authApiNodes = require('./api-nodes');
 const authUi = require('./ui-user');
 const display = require('../display');
 const nodeUi = require('./ui-nodes');
-const appData = require('../app-data');
+const app = require('../app-data');
 
 const traverseBreadcrumb = (e) => {
   $(e.target).parent().nextAll().remove();
@@ -17,7 +17,7 @@ const nodeEventHandlers = () => {
   $('#application-x-www-form-urlencoded').on('submit', function(e) {
     e.preventDefault();
     let data = new FormData(this);
-    data.append('path', `,${appData.currentDirectory},`);
+    data.append('path', `,${app.currentDirectory},`);
     authApiNodes.uploadNode(nodeUi.uploadNodeSuccess, nodeUi.uploadNodeFailure, data);
     console.log(data);
   });
@@ -59,7 +59,7 @@ const nodeEventHandlers = () => {
   $('#create-folder-form').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
-    data += `&node%5Bpath%5D=,${appData.currentDirectory},`;
+    data += `&node%5Bpath%5D=,${app.currentDirectory},`;
     console.log('this is data');
     authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
     console.log(data);
@@ -73,8 +73,8 @@ const nodeEventHandlers = () => {
       window.open(external_link, '_blank');
       // window.location.assign($(e.target).attr('data-location'));
     } else if (dataType === "folder") {
-      appData.currentDirectory += `,${$(e.target).text()}`;
-      authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+      app.currentDirectory += `,${$(e.target).text()}`;
+      authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, app.currentDirectory);
 
       let text = $('.breadcrumb .active').text();
 
@@ -91,15 +91,15 @@ const nodeEventHandlers = () => {
         e.preventDefault();
         let name = $(e.target).text();
         if(name === 'Home') {
-          appData.currentDirectory = 'home';
-          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+          app.currentDirectory = 'home';
+          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, app.currentDirectory);
           traverseBreadcrumb(e);
         }
         else {
           let search = new RegExp(`^(.*?)${name}`);
-          let result = appData.currentDirectory.match(search);
-          appData.currentDirectory = result[0];
-          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+          let result = app.currentDirectory.match(search);
+          app.currentDirectory = result[0];
+          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, app.currentDirectory);
           traverseBreadcrumb(e);
         }
 
