@@ -15,9 +15,8 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.currentUser.token = data.user.token;
   app.currentUser.id = data.user._id;
-  console.log(app.currentUser);
-  console.log("Sign in successful");
   $('#sign-in-modal').modal('hide');
+  console.log("Sign in successful");
   //Calls GET for User's home directory
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
   // apiNodes.getAllNodes(); change this to get all folders
@@ -33,7 +32,8 @@ const signUpSuccess = (data) => {
 
 
 const signOutSuccess = () => {
-  app.currentUser = null;
+  app.currentUser.token = null;
+  app.currentUser.id = null;
   console.log(app);
   console.log("You signed out bro. Sweet!");
   $('#sign-out-modal').modal('hide');
