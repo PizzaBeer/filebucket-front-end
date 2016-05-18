@@ -18,7 +18,7 @@ const nodeEventHandlers = () => {
 
   $('#get-nodes').on('click', function(e) {
     e.preventDefault();
-    authApiNodes.getAllNodes(nodeUi.displayNodeSuccess, nodeUi.failure);
+    authApiNodes.getAllNodes(display.displayAllNodes, nodeUi.failure);
   });
 
   $('#all-nodes').on('click', '.edit-tags', function(e) {
@@ -66,7 +66,9 @@ const nodeEventHandlers = () => {
       window.open(external_link, '_blank');
       // window.location.assign($(e.target).attr('data-location'));
     } else if (dataType === "folder") {
-      
+      appData.currentDirectory += `,${$(e.target).text()}`;
+      console.log(appData.currentDirectory);
+      authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
     }
   });
 };
