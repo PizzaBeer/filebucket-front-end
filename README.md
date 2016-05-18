@@ -52,6 +52,8 @@
 
 *To test your workflow with changelog generator, you can use [test repo](https://github.com/skywinder/changelog_test/)*
 
+## Development Process
+
 
 
 
@@ -61,6 +63,13 @@
 
 ## ![WireFrames](https://i.gyazo.com/0ccac675be470898568f60699475d4d7.png)
 
-[![Ben Adamski](https://avatars1.githubusercontent.com/u/16841950?v=3&s=460)](https://www.benjamski.com) | [![Natalie Djerf](https://avatars3.githubusercontent.com/u/17814071?v=3&s=460)](https://github.com/natdjerf) | [![Roberto DelValle](https://avatars1.githubusercontent.com/u/17518260?v=3&s=400)](https://github.com/rdelvallej32) | [![Zachary Simpson](https://avatars2.githubusercontent.com/u/9722944?v=3&s=400)
+[![Ben Adamski](https://avatars1.githubusercontent.com/u/16841950?v=3&s=460)](https://www.benjamski.com) | [![Natalie Djerf](https://avatars3.githubusercontent.com/u/17814071?v=3&s=460)](https://github.com/natdjerf) | [![Roberto DelValle](https://avatars1.githubusercontent.com/u/17518260?v=3&s=400)](https://github.com/rdelvallej32) | ![Zachary Simpson](https://avatars2.githubusercontent.com/u/9722944?v=3&s=400)
 ---|---|---
 [Ben Adamski](https://benjamski.com) | [Natalie Djerf](https://github.com/natdjerf) | [Roberto DelValle](https://github.com/cuprous) | [Zachary Simpson]
+
+© 2016+, [General Assembly, Inc.](http://generalassemb.ly) [MIT License].<br>
+
+
+Authored and maintained by Ben Adamski | Natalie Djerf | Roberto DelValle | Zachary Simpson and with help from :fa-heart:[contributors](https://github.com/PizzaBeer/filebucket-front-end/graphs/contributors).
+
+[MIT License]: http://mit-license.org/
