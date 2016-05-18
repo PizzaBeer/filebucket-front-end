@@ -5,9 +5,10 @@ const display = require('../display');
 
 // Creates Files
 const uploadNode = (success, failure, data) => {
+  // console.log(data);
   $.ajax({
       method: 'POST',
-      url: app.server.api + '/files',
+      url: app.server.api + '/create-file',
       dataType: 'json',
       processData: false,
       contentType: false,
