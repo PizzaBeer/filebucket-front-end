@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="body section">
+<body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -47,73 +47,79 @@
 
 
 
+<!-- Landing Header -->
+ <div class="landing-header">
+     <div class="container">
 
-<!-- Main Body -->
-<div class="section container">
+         <div class="row">
+             <div class="col-lg-12">
+                 <div class="intro-message">
+                     <h1>Welcome to the QLOUD.</h1>
+                     <h3>Secure cloud storage</h3>
+                     <ul class="list-inline intro-social-buttons">
+                         <li>
+                            <a href="#" data-toggle="modal" data-target="#sign-in-modal">Sign In</a>
+                         </li>
+                         <li>
+                            <a href="#">Learn More</a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
 
-
-<!--Side Bar -->
-<div class="row">
-  <div class="col-sm-3">
-    <div class="sidebar-nav">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <span class="visible-xs navbar-brand">Sidebar menu</span>
-        </div>
-        <div class="navbar-collapse collapse sidebar-navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"></li>
-            <li><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#upload-file-modal">Upload File</a></li>
-            <li><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#create-folder-modal">Create a Folder</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- End Side Bar -->
-
-  <div class="col-sm-9">
-    <h3>
-      <ol class="breadcrumb">
-        <li class="active">Home</li>
-      </ol>
-    </h3>
-    <a id="get-nodes" class="btn btn-success"><span class="glyphicon glyphicon-cloud-download"></span>Get Nodes</a>
-    <div id="all-nodes" class="all-nodes" data-spy="scroll" data-target=".header" >
-    </div>
+     </div>
 
 
+ </div>
+ <!-- Landing Header -->
+
+<!-- Body Wrapper -->
+ <div id="wrapper" class="page-content">
+
+ <!-- Sidebar -->
+   <div id="sidebar-wrapper">
+       <ul class="sidebar-nav">
+           <li>
+               <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#upload-file-modal">Upload File</a>
+           </li>
+           <li>
+             <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#create-folder-modal">Create a Folder</a>
+           </li>
+       </ul>
+   </div>
+   <!-- End Sidebar -->
+
+   <!-- Page Content Wrapper-->
+   <div id="page-content-wrapper">
+       <div class="container-fluid">
+           <div class="row">
+               <div class="col-lg-12">
+                  <h2>
+                      <ol class="breadcrumb">
+                        <li class="active">Home</li>
+                      </ol>
+                  </h2>
+                  <!-- Button for getting nodes: <a id="get-nodes" class="btn btn-success"><span class="glyphicon glyphicon-cloud-download"></span>Get Nodes</a> -->
+                  <div id="all-nodes" class="all-nodes" data-spy="scroll" data-target=".header" >
+                  </div>
+                  <div class="row drop-zone">
+                    <p>(will be drop zone)</p>
+                  </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <!-- End Page Content Wrapper -->
 
 
-    <div class="row drop-zone">
-      <p>(will be drop zone)</p>
-    </div>
-  </div>
-</div>
 
 
 
 
 
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
+ </div>
+<!-- End Body Wrapper -->
 
 
 
@@ -339,7 +345,7 @@
       </div>
       <div class="modal-body">
         <div class="upload-file">
-          <form class="upload-form" id="application-x-www-form-urlencoded" action="http://localhost:3000/files" method="post" enctype="application/x-www-form-data">
+          <form class="upload-form" id="application-x-www-form-urlencoded" action="http://localhost:3000/create-file" method="post" enctype="application/x-www-form-data">
             <div class="form-group">
                 <input type="file" name="node[file]">
             </div>

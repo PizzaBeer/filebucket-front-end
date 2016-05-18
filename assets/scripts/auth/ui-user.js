@@ -18,9 +18,14 @@ const signInSuccess = (data) => {
   $('#sign-in-modal').modal('hide');
   console.log("Sign in successful");
   $('.all-nodes').show();
+  $('.page-content').removeClass('hidden');
+  $('.landing-header').addClass('hidden');
+
   //Calls GET for User's home directory
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
   // apiNodes.getAllNodes(); change this to get all folders
+
+
 };
 
 const signUpSuccess = (data) => {

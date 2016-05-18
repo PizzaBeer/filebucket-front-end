@@ -12,6 +12,8 @@ $(() => {
   console.log('page loaded!');
   userEvents.userEventHandlers();
   nodeEvents.nodeEventHandlers();
+  $('.landing-header').addClass('hidden');
+  // $('.page-content').addClass('hidden');
 });
 
 $('body').scrollspy({
