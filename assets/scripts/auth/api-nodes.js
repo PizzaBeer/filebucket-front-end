@@ -71,7 +71,6 @@ const deleteNode = function(success, failure, nodeId) {
 };
 
 const createFolder = (success, failure, data) => {
-  console.log(data);
   $.ajax({
       method: 'POST',
       url: app.server.api + '/create-folder',
