@@ -11,7 +11,7 @@
   <tbody>
     {{#nodes}}
       <tr class="all-files-row">
-        <td><a href="#" data-type="{{this.type}}">{{this.name}}</a></td>
+        <td><a href="#" data-type="{{this.type}}" data-location="{{this.location}}">{{this.name}}</a></td>
         <td>{{this.updated_at}}</td>
         <td>{{this.tags}}</td>
         <td><button type="button" class="btn btn-success edit-tags" data-toggle="modal" data-target="#edit-tags-modal" data-id="{{this._id}}" ><span class="glyphicon glyphicon-tags"></span>Edit Tags</button></td>

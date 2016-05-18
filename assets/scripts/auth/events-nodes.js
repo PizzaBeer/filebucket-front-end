@@ -18,7 +18,7 @@ const nodeEventHandlers = () => {
 
   $('#get-nodes').on('click', function(e) {
     e.preventDefault();
-    authApiNodes.getAllNodes(display.displayAllNodes, nodeUi.failure);
+    authApiNodes.getAllNodes(nodeUi.displayNodeSuccess, nodeUi.failure);
   });
 
   $('#all-nodes').on('click', '.edit-tags', function(e) {
@@ -58,11 +58,17 @@ const nodeEventHandlers = () => {
     authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
     console.log(data);
   });
-
-
-
-
-
+  $('.all-nodes').on('click', function(e) {
+    e.preventDefault();
+    let dataType = $(e.target).attr('data-type');
+    if (dataType === "file") {
+      let external_link = $(e.target).attr('data-location');
+      window.open(external_link, '_blank');
+      // window.location.assign($(e.target).attr('data-location'));
+    } else if (dataType === "folder") {
+      
+    }
+  });
 };
 
 module.exports = {
