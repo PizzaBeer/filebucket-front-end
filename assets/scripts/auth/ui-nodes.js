@@ -30,7 +30,7 @@ const uploadNodeFailure = (error) => {
 // edits/adds tags
 const editNodeSuccess = () => {
   console.log('Tag successfully added');
-  apiNodes.getAllNodes();
+  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
   $('#edit-tags-modal').modal('hide');
   $( '#edit-tag-form' ).each(function(){
     this.reset();
@@ -39,7 +39,7 @@ const editNodeSuccess = () => {
 
 const deleteNodeSuccess = () => {
   console.log('Node successfully deleted');
-  apiNodes.getAllNodes();
+  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
   $('#delete-file-modal').modal('hide');
 };
 
