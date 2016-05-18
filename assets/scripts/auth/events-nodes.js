@@ -82,19 +82,27 @@ const nodeEventHandlers = () => {
 
       $('.breadcrumb').on('click', function(e){
         e.preventDefault();
-        let name = $(e.target).text();
-        console.log(name);
-        let search = new RegExp(`^(.*?)${name}`);
-        let teststring = "one,two,three,four,Documents";
-        appData.currentDirectory = name;
-        let result = appData.currentDirectory.match(search);
-        console.log(result);
-        // console.log(appData.currentDirectory);
-        // authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
 
+
+        let name = $(e.target).text();
+
+        if(name === 'Home') {
+          console.log("Do something here");
+
+        }
+
+        else {
+        let search = new RegExp(`^(.*?)${name}`);
+        let result = appData.currentDirectory.match(search);
+        appData.currentDirectory = result[0];
+          console.log(appData.currentDirectory);
+          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+          $(e.target).parent().nextAll().remove();
+          $(e.target).parent().addClass('active');
+          $(e.target).contents().unwrap();
+        }
 
       });
-
 };
 
 module.exports = {
