@@ -71,15 +71,30 @@ const nodeEventHandlers = () => {
       authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
 
       let text = $('.breadcrumb .active').text();
+
+      //events to dynamically change breadcrumb to current location
       $('.breadcrumb .active').empty();
       $('.breadcrumb .active').append(`<a href="#">${text}</a>`);
       $('.breadcrumb .active').removeClass();
       $('.breadcrumb').append(`<li class="active">${$(e.target).text()}</li>`);
-
-
-
     }
   });
+
+      $('.breadcrumb').on('click', function(e){
+        e.preventDefault();
+        let name = $(e.target).text();
+        console.log(name);
+        let search = new RegExp(`^(.*?)${name}`);
+        let teststring = "one,two,three,four,Documents";
+        let result = teststring.match(search);
+        console.log(result);
+        // appData.currentDirectory = name;
+        // console.log(appData.currentDirectory);
+        // authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+
+
+      });
+
 };
 
 module.exports = {
