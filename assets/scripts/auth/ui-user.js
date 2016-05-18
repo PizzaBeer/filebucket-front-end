@@ -18,6 +18,7 @@ const signInSuccess = (data) => {
   $('#sign-in-modal').modal('hide');
   console.log("Sign in successful");
   $('.all-nodes').show();
+  $('.breadcrumb').show();
   $('.page-content').removeClass('hidden');
   $('.landing-header').addClass('hidden');
 
@@ -40,10 +41,15 @@ const signUpSuccess = (data) => {
 const signOutSuccess = () => {
   app.currentUser.token = null;
   app.currentUser.id = null;
+  app.currentDirectory = "home";
   console.log(app);
   console.log("You signed out bro. Sweet!");
   $('#sign-out-modal').modal('hide');
   $('.all-nodes').empty();
+  $('.breadcrumb').hide();
+  $('.breadcrumb .child').remove();
+  $('.breadcrumb .root').addClass('active');
+  $('.root').replaceWith( `<li class="root active">Home</li>` );
   //clear contents
 };
 
