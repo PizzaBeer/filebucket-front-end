@@ -43,6 +43,7 @@ webpackJsonp([0],[
 	  userEvents.userEventHandlers();
 	  nodeEvents.nodeEventHandlers();
 	  $('.page-content').addClass('hidden');
+	  $('.myaccount-dropdown').addClass('hidden');
 	});
 
 	$('body').scrollspy({
@@ -203,6 +204,8 @@ webpackJsonp([0],[
 	  $('.breadcrumb').show();
 	  $('.page-content').removeClass('hidden');
 	  $('.landing-header').addClass('hidden');
+	  $('.myaccount-dropdown').removeClass('hidden');
+	  $('body').removeClass('bg-image');
 	  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
 	  $('.upload-form').each(function () {
 	    this.reset();
@@ -235,14 +238,14 @@ webpackJsonp([0],[
 	  app.currentUser.token = null;
 	  app.currentUser.id = null;
 	  app.currentDirectory = "home";
-	  console.log(app);
-	  console.log("You signed out bro. Sweet!");
 	  $('#sign-out-modal').modal('hide');
 	  $('.all-nodes').empty();
 	  $('.breadcrumb').hide();
 	  $('.breadcrumb .child').remove();
 	  $('.breadcrumb .root').addClass('active');
 	  $('.root').replaceWith('<li class="root active">Home</li>');
+	  $('.myaccount-dropdown').addClass('hidden');
+	  $('body').addClass('bg-image');
 	  //clear contents
 	};
 
