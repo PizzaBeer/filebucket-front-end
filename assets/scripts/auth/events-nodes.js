@@ -58,6 +58,7 @@ const nodeEventHandlers = () => {
     authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
     console.log(data);
   });
+
   $('.all-nodes').on('click', function(e) {
     e.preventDefault();
     let dataType = $(e.target).attr('data-type');
@@ -67,8 +68,13 @@ const nodeEventHandlers = () => {
       // window.location.assign($(e.target).attr('data-location'));
     } else if (dataType === "folder") {
       appData.currentDirectory += `,${$(e.target).text()}`;
-      console.log(appData.currentDirectory);
       authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+
+      $('.breadcrumb .active').removeClass();
+      $('.breadcrumb').append(`<li class="active">${$(e.target).text()}</li>`);
+
+
+
     }
   });
 };
