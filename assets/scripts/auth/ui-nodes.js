@@ -23,9 +23,11 @@ const uploadNodeFailure = (error) => {
   // will create a modal for upload fail
 };
 
+// edits/adds tags
 const editNodeSuccess = () => {
   console.log('Tag successfully added');
   apiNodes.getAllNodes();
+  $('#edit-tags-modal').modal('hide');
   // will create a toast/tool tip for tag added success
 };
 
