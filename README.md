@@ -69,6 +69,20 @@
 ## User Stories
 
 
+1. As a user, I want to store my files on a remote server, so I can access them anywhere.
+2. As a user, I want an easy-to-use web interface for adding, viewing, removing my files.
+3. As a user, I want my files accessible only to me.
+4. As a user, I want to be able to add tags to my files.
+5. As a user, I want to be able to tag files to organize them.
+6. As a user, I want to be able to update my files.
+7. As a user, I want to see my uploaded files upon signin.
+8. As a user, I want to see my files sorted by folders.
+9. As a user, I want an intuitive UI.
+10. As a user, I want my files accessible only to me.
+11. As a user, I want to search by tags.
+12. As a user, I want to be able to add tags to my files.
+
+
 
 
 ## Wire Frames ![WireFrames](https://i.gyazo.com/0ccac675be470898568f60699475d4d7.png)
