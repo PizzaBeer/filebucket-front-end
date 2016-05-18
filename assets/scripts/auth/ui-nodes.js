@@ -34,6 +34,7 @@ const editNodeSuccess = () => {
 const deleteNodeSuccess = () => {
   console.log('Node successfully deleted');
   apiNodes.getAllNodes();
+  $('#delete-file-modal').modal('hide');
 };
 
 const createFolderSuccess = () => {
