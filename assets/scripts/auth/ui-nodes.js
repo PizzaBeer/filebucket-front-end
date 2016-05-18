@@ -5,10 +5,13 @@ const apiNodes = require('./api-nodes.js');
 const uploadNodeSuccess = () => {
   console.log('Node successfully uploaded.');
   apiNodes.getAllNodes();
+  $('#upload-file-modal').modal('hide');
+  $('#upload-form').each(function(){
+    this.reset();
+  // will create notification/bootstrap alert for success
 
-  // will create toast/tool tip for upload success
+});
 };
-
 const uploadNodeFailure = (error) => {
   console.error(error);
   // will create a modal for upload fail
@@ -19,7 +22,9 @@ const editNodeSuccess = () => {
   console.log('Tag successfully added');
   apiNodes.getAllNodes();
   $('#edit-tags-modal').modal('hide');
-  // will create a toast/tool tip for tag added success
+  $( '#edit-tag-form' ).each(function(){
+    this.reset();
+});
 };
 
 const deleteNodeSuccess = () => {
