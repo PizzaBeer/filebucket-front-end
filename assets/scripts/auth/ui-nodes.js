@@ -1,11 +1,20 @@
 'use strict';
 
 const apiNodes = require('./api-nodes.js');
+const app = require('../app-data');
+const display = require('../display');
+
+const success = (data) => {
+  console.log(data);
+};
+
+const failure = (error) => {
+  console.error(error);
+};
 
 const uploadNodeSuccess = () => {
   console.log('Node successfully uploaded.');
   apiNodes.getAllNodes();
-
   // will create toast/tool tip for upload success
 };
 
@@ -25,22 +34,22 @@ const deleteNodeSuccess = () => {
   apiNodes.getAllNodes();
 };
 
-
-
-
-const success = (data) => {
-  console.log(data);
+const createFolderSuccess = () => {
+  console.log('Create folder success');
+  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
 };
 
-const failure = (error) => {
-  console.error(error);
-};
+
+
+
+
 
 module.exports = {
+  success,
+  failure,
   uploadNodeSuccess,
   uploadNodeFailure,
   editNodeSuccess,
   deleteNodeSuccess,
-  success,
-  failure,
+  createFolderSuccess
 };
