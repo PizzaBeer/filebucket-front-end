@@ -15,33 +15,38 @@ const failure = (error) => {
 const uploadNodeSuccess = () => {
   console.log('Node successfully uploaded.');
   apiNodes.getAllNodes();
-  // will create toast/tool tip for upload success
-};
+  $('#upload-file-modal').modal('hide');
+  $('.upload-form').each(function(){
+    this.reset();
+  // will create notification/bootstrap alert for success
 
+});
+};
 const uploadNodeFailure = (error) => {
   console.error(error);
   // will create a modal for upload fail
 };
 
+// edits/adds tags
 const editNodeSuccess = () => {
   console.log('Tag successfully added');
   apiNodes.getAllNodes();
-  // will create a toast/tool tip for tag added success
+  $('#edit-tags-modal').modal('hide');
+  $( '#edit-tag-form' ).each(function(){
+    this.reset();
+});
 };
 
 const deleteNodeSuccess = () => {
   console.log('Node successfully deleted');
   apiNodes.getAllNodes();
+  $('#delete-file-modal').modal('hide');
 };
 
 const createFolderSuccess = () => {
   console.log('Create folder success');
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
 };
-
-
-
-
 
 
 module.exports = {

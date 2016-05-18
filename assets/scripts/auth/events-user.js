@@ -2,7 +2,7 @@
 
 
 const authApi = require('./api-user');
-const authApiNodes = require('./api-nodes');
+// const authApiNodes = require('./api-nodes'); Not being used ATM
 const authUi = require('./ui-user');
 
 
@@ -12,7 +12,7 @@ const userEventHandlers = () => {
   $('#sign-up').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
-    // authApi.signUp(authUi.signUpSuccess, authUi.failure, data);
+    authApi.signUp(authUi.signUpSuccess, authUi.failure, data);
     console.log(data);
   });
 
@@ -32,7 +32,7 @@ const userEventHandlers = () => {
   $('#change-password').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
-    authApi.changePass(authUi.success, authUi.failure, data);
+    authApi.changePass(authUi.changePwSuccess, authUi.failure, data);
     console.log(data);
   });
 };

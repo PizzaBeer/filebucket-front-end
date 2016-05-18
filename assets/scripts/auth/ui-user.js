@@ -18,30 +18,32 @@ const signInSuccess = (data) => {
   console.log(app.currentUser);
   console.log("Sign in successful");
   $('#sign-in-modal').modal('hide');
-
   //Calls GET for User's home directory
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
-
-
   // apiNodes.getAllNodes(); change this to get all folders
 };
 
 const signUpSuccess = (data) => {
   console.log("Sign up successful");
   $('#sign-up-modal').modal('hide');
+  $('#sign-up').each(function(){
+    this.reset();
+});
 };
+
 
 const signOutSuccess = () => {
   app.currentUser = null;
   console.log(app);
   console.log("You signed out bro. Sweet!");
   $('#sign-out-modal').modal('hide');
+  //clear contents
 };
 
+
 const changePwSuccess = (data) => {
-  console.log("Sign up successful");
+  console.log("Password change successful!");
   $('#change-password-modal').modal('hide');
-  $('#change-password-modal').closeModal();
   //THIS needs to change to hide in BS
 };
 
