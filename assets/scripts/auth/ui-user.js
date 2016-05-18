@@ -37,6 +37,7 @@ const signOutSuccess = () => {
   console.log(app);
   console.log("You signed out bro. Sweet!");
   $('#sign-out-modal').modal('hide');
+  $('.handlebars').empty();
   //clear contents
 };
 
