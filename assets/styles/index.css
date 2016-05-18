@@ -1,9 +1,15 @@
-body, html {
+body {
+  padding-top: 50px;
   font-family: 'Lato', sans-serif;
 }
 
-body {
-  padding-top: 50px;
+.bg-image {
+  background: url(https://docs.bryantx.gov/icons/stateofthecity/stateofthecity-it.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 
 a {
@@ -27,24 +33,12 @@ a:hover {
 }
 
 .landing-header {
-  background: url(https://docs.bryantx.gov/icons/stateofthecity/stateofthecity-it.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   color: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
 }
 
-.glyphicon-folder-open {
-
-}
-
-.glyphicon-file {
-
-}
 
 .landing-header a{
   color: #ffffff;
