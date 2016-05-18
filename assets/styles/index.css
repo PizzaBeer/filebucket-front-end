@@ -9,7 +9,7 @@ body {
 
 .container {
  background-color: #fff;
- padding: 30px;
+ padding: 50px;
 }
 
 
@@ -42,10 +42,6 @@ body {
 td {
   padding-right: 5px;
   padding-left: 5px;
-}
-
-.nav-header {
-  background-image: url(http://i.imgur.com/xFFuVvv.jpg);
 }
 
 
