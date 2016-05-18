@@ -17,6 +17,7 @@ const signInSuccess = (data) => {
   app.currentUser.id = data.user._id;
   $('#sign-in-modal').modal('hide');
   console.log("Sign in successful");
+  $('.all-nodes').show();
   //Calls GET for User's home directory
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
   // apiNodes.getAllNodes(); change this to get all folders
