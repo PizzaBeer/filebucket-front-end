@@ -44,7 +44,6 @@ const deleteNodeSuccess = () => {
 };
 
 const createFolderSuccess = () => {
-  console.log('Create folder success');
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
   $('#create-folder-modal').modal('hide');
 
