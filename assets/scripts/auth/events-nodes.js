@@ -18,7 +18,7 @@ const nodeEventHandlers = () => {
 
   $('#get-nodes').on('click', function(e) {
     e.preventDefault();
-    authApiNodes.getAllNodes(nodeUi.displayNodeSuccess, nodeUi.failure);
+    authApiNodes.getAllNodes(display.displayAllNodes, nodeUi.failure);
   });
 
   $('#all-nodes').on('click', '.edit-tags', function(e) {
