@@ -41,19 +41,12 @@ const deleteNodeSuccess = () => {
   console.log('Node successfully deleted');
   apiNodes.getAllNodes();
   $('#delete-file-modal').modal('hide');
-  $( '#delete-file-form' ).each(function(){
-    this.reset();
-});
 };
 
 const createFolderSuccess = () => {
   console.log('Create folder success');
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
 };
-
-
-
-
 
 
 module.exports = {

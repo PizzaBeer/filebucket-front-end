@@ -29,6 +29,9 @@ const signInSuccess = (data) => {
 const signUpSuccess = (data) => {
   console.log("Sign up successful");
   $('#sign-up-modal').modal('hide');
+  $('#sign-up-form').each(function(){
+    this.reset();
+});
 };
 
 const signOutSuccess = () => {
@@ -37,6 +40,7 @@ const signOutSuccess = () => {
   console.log("You signed out bro. Sweet!");
   $('#sign-out-modal').modal('hide');
 };
+
 
 const changePwSuccess = (data) => {
   console.log("Password change successful!");
