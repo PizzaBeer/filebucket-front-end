@@ -52,16 +52,26 @@
 
 *To test your workflow with changelog generator, you can use [test repo](https://github.com/skywinder/changelog_test/)*
 
-## Development Process
+## Our Development Process
+
+#### We used Trello to manage our workflow and stay on schedule
+
+<img src="http://i.imgur.com/nYlWO3X.gif">
+
+#### Group Programming
+
+- We regularly leveraged pair and group programming to keep all team members active in every stage of the development process and approach every problem as a cohesive unit, from multiple perspectives.
+
+- This may have slowed our overal rate of prograss, but it gave every developer exposure to every stage of development and kept our momentum steady.
+
+
+
+## User Stories
 
 
 
 
-
-
-
-
-## ![WireFrames](https://i.gyazo.com/0ccac675be470898568f60699475d4d7.png)
+## Wire Frames ![WireFrames](https://i.gyazo.com/0ccac675be470898568f60699475d4d7.png)
 
 [![Ben Adamski](https://avatars1.githubusercontent.com/u/16841950?v=3&s=460)](https://github.com/benjamski) | [![Natalie Djerf](https://avatars3.githubusercontent.com/u/17814071?v=3&s=460)](https://github.com/natdjerf) | [![Roberto DelValle](https://avatars1.githubusercontent.com/u/17518260?v=3&s=400)](https://github.com/rdelvallej32) | [![Zachary Simpson](https://avatars2.githubusercontent.com/u/9722944?v=3&s=400)](https://github.com/cuprous)
 ---|---|---
