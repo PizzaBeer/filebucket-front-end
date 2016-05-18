@@ -30,7 +30,7 @@ const userEventHandlers = () => {
   $('#change-password').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
-    authApi.changePass(authUi.changePwSuccess, authUi.failure, data);
+    authApi.changePass(authUi.changePwSuccess, authUi.changePwFailure, data);
     console.log(data);
   });
 };
