@@ -66,7 +66,9 @@ const nodeEventHandlers = () => {
       window.open(external_link, '_blank');
       // window.location.assign($(e.target).attr('data-location'));
     } else if (dataType === "folder") {
-      
+      appData.currentDirectory += `,${$(e.target).text()}`;
+      console.log(appData.currentDirectory);
+
     }
   });
 };
