@@ -12,6 +12,7 @@ $(() => {
   console.log('page loaded!');
   userEvents.userEventHandlers();
   nodeEvents.nodeEventHandlers();
+  $('.page-content').addClass('hidden');
 });
 
 $('body').scrollspy({
