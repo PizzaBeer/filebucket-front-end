@@ -31,10 +31,8 @@ const deleteNodeSuccess = () => {
   console.log('Node successfully deleted');
   apiNodes.getAllNodes();
   $('#delete-file-modal').modal('hide');
-  $( '#delete-file-form' ).each(function(){
-    this.reset();
-});
 };
+
 
 
 
