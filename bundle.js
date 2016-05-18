@@ -68,13 +68,13 @@ webpackJsonp([0],[
 	  $('#sign-up').on('submit', function (event) {
 	    event.preventDefault();
 	    var data = getFormFields(this);
-	    authApi.signUp(authUi.signUpSuccess, authUi.failure, data);
+	    authApi.signUp(authUi.signUpSuccess, authUi.signUpFailure, data);
 	  });
 
 	  $('#sign-in').on('submit', function (event) {
 	    var data = getFormFields(this);
 	    event.preventDefault();
-	    authApi.signIn(authUi.signInSuccess, authUi.failure, data);
+	    authApi.signIn(authUi.signInSuccess, authUi.signInFailure, data);
 	  });
 
 	  $('#sign-out').on('click', function (event) {
@@ -86,7 +86,7 @@ webpackJsonp([0],[
 	  $('#change-password').on('submit', function (event) {
 	    event.preventDefault();
 	    var data = getFormFields(this);
-	    authApi.changePass(authUi.changePwSuccess, authUi.failure, data);
+	    authApi.changePass(authUi.changePwSuccess, authUi.changePwFailure, data);
 	    console.log(data);
 	  });
 	};
@@ -202,10 +202,13 @@ webpackJsonp([0],[
 	  $('.breadcrumb').show();
 	  $('.page-content').removeClass('hidden');
 	  $('.landing-header').addClass('hidden');
-
-	  //Calls GET for User's home directory
 	  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
-	  // apiNodes.getAllNodes(); change this to get all folders
+	};
+
+	var signInFailure = function signInFailure(error) {
+	  console.error(error);
+	  $('#sign-in-modal').modal('hide');
+	  $('#sign-in-fail-modal').modal('show');
 	};
 
 	var signUpSuccess = function signUpSuccess(data) {
@@ -214,6 +217,12 @@ webpackJsonp([0],[
 	  $('#sign-up').each(function () {
 	    this.reset();
 	  });
+	};
+
+	var signUpFailure = function signUpFailure(error) {
+	  console.error(error);
+	  $('#sign-up-modal').modal('hide');
+	  $('#sign-up-fail-modal').modal('show');
 	};
 
 	var signOutSuccess = function signOutSuccess() {
@@ -240,13 +249,22 @@ webpackJsonp([0],[
 	  });
 	};
 
+	var changePwFailure = function changePwFailure(error) {
+	  console.error(error);
+	  $('#change-password-modal').modal('hide');
+	  $('#change-password-fail-modal').modal('show');
+	};
+
 	module.exports = {
 	  failure: failure,
 	  success: success,
 	  changePwSuccess: changePwSuccess,
+	  changePwFailure: changePwFailure,
 	  signUpSuccess: signUpSuccess,
+	  signUpFailure: signUpFailure,
 	  signOutSuccess: signOutSuccess,
-	  signInSuccess: signInSuccess
+	  signInSuccess: signInSuccess,
+	  signInFailure: signInFailure
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
