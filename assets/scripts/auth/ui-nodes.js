@@ -16,7 +16,7 @@ const uploadNodeSuccess = () => {
   console.log('Node successfully uploaded.');
   apiNodes.getAllNodes();
   $('#upload-file-modal').modal('hide');
-  $('#upload-form').each(function(){
+  $('.upload-form').each(function(){
     this.reset();
   // will create notification/bootstrap alert for success
 
