@@ -6,6 +6,12 @@ const display = require('../display');
 const nodeUi = require('./ui-nodes');
 const appData = require('../app-data');
 
+const traverseBreadcrumb = (e) => {
+  $(e.target).parent().nextAll().remove();
+  $(e.target).parent().addClass('active');
+  $(e.target).contents().unwrap();
+};
+
 const nodeEventHandlers = () => {
 
   $('#application-x-www-form-urlencoded').on('submit', function(e) {
@@ -80,24 +86,21 @@ const nodeEventHandlers = () => {
     }
   });
 
+
       $('.breadcrumb').on('click', function(e){
         e.preventDefault();
         let name = $(e.target).text();
         if(name === 'Home') {
           appData.currentDirectory = 'home';
           authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
-          $(e.target).parent().nextAll().remove();
-          $(e.target).parent().addClass('active');
-          $(e.target).contents().unwrap();
+          traverseBreadcrumb(e);
         }
         else {
           let search = new RegExp(`^(.*?)${name}`);
           let result = appData.currentDirectory.match(search);
           appData.currentDirectory = result[0];
           authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
-          $(e.target).parent().nextAll().remove();
-          $(e.target).parent().addClass('active');
-          $(e.target).contents().unwrap();
+          traverseBreadcrumb(e);
         }
 
       });
