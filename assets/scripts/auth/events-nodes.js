@@ -53,7 +53,7 @@ const nodeEventHandlers = () => {
     let nodeId = $(this).attr('data-id');
     console.log('delete this => ' + nodeId);
     console.log(nodeId);
-    authApiNodes.deleteNode(nodeUi.deleteNodeSuccess, authUi.failure, nodeId);
+    authApiNodes.deleteNode(nodeUi.deleteNodeSuccess, nodeUi.failure, nodeId);
   });
 
   $('#create-folder-form').on('submit', function (event) {
@@ -61,7 +61,7 @@ const nodeEventHandlers = () => {
     let data = getFormFields(this);
     data += `&node%5Bpath%5D=,${app.currentDirectory},`;
     console.log('this is data');
-    authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
+    authApiNodes.createFolder(nodeUi.createFolderSuccess, nodeUi.failure, data); //add ajax call
     console.log(data);
   });
 
@@ -74,7 +74,7 @@ const nodeEventHandlers = () => {
       // window.location.assign($(e.target).attr('data-location'));
     } else if (dataType === "folder") {
       app.currentDirectory += `,${$(e.target).text()}`;
-      authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, app.currentDirectory);
+      authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
 
       let text = $('.breadcrumb .active').text();
 
@@ -92,14 +92,14 @@ const nodeEventHandlers = () => {
         let name = $(e.target).text();
         if(name === 'Home') {
           app.currentDirectory = 'home';
-          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, app.currentDirectory);
+          authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
           traverseBreadcrumb(e);
         }
         else {
           let search = new RegExp(`^(.*?)${name}`);
           let result = app.currentDirectory.match(search);
           app.currentDirectory = result[0];
-          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, app.currentDirectory);
+          authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
           traverseBreadcrumb(e);
         }
 
