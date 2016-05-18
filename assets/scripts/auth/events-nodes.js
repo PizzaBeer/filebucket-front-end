@@ -6,6 +6,12 @@ const display = require('../display');
 const nodeUi = require('./ui-nodes');
 const appData = require('../app-data');
 
+const traverseBreadcrumb = (e) => {
+  $(e.target).parent().nextAll().remove();
+  $(e.target).parent().addClass('active');
+  $(e.target).contents().unwrap();
+};
+
 const nodeEventHandlers = () => {
 
   $('#application-x-www-form-urlencoded').on('submit', function(e) {
@@ -58,6 +64,7 @@ const nodeEventHandlers = () => {
     authApiNodes.createFolder(authUi.success, authUi.failure, data); //add ajax call
     console.log(data);
   });
+
   $('.all-nodes').on('click', function(e) {
     e.preventDefault();
     let dataType = $(e.target).attr('data-type');
@@ -67,10 +74,36 @@ const nodeEventHandlers = () => {
       // window.location.assign($(e.target).attr('data-location'));
     } else if (dataType === "folder") {
       appData.currentDirectory += `,${$(e.target).text()}`;
-      console.log(appData.currentDirectory);
       authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+
+      let text = $('.breadcrumb .active').text();
+
+      //events to dynamically change breadcrumb to current location
+      $('.breadcrumb .active').empty();
+      $('.breadcrumb .active').append(`<a href="#">${text}</a>`);
+      $('.breadcrumb .active').removeClass();
+      $('.breadcrumb').append(`<li class="active">${$(e.target).text()}</li>`);
     }
   });
+
+
+      $('.breadcrumb').on('click', function(e){
+        e.preventDefault();
+        let name = $(e.target).text();
+        if(name === 'Home') {
+          appData.currentDirectory = 'home';
+          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+          traverseBreadcrumb(e);
+        }
+        else {
+          let search = new RegExp(`^(.*?)${name}`);
+          let result = appData.currentDirectory.match(search);
+          appData.currentDirectory = result[0];
+          authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
+          traverseBreadcrumb(e);
+        }
+
+      });
 };
 
 module.exports = {
