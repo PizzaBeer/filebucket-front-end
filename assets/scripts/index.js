@@ -13,6 +13,7 @@ $(() => {
   userEvents.userEventHandlers();
   nodeEvents.nodeEventHandlers();
   $('.page-content').addClass('hidden');
+  $('.myaccount-dropdown').addClass('hidden');
 });
 
 $('body').scrollspy({

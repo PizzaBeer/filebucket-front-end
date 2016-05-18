@@ -42,8 +42,7 @@ webpackJsonp([0],[
 	  console.log('page loaded!');
 	  userEvents.userEventHandlers();
 	  nodeEvents.nodeEventHandlers();
-	  $('.landing-header').addClass('hidden');
-	  // $('.page-content').addClass('hidden');
+	  $('.page-content').addClass('hidden');
 	});
 
 	$('body').scrollspy({
@@ -62,12 +61,14 @@ webpackJsonp([0],[
 	var authApi = __webpack_require__(5);
 	// const authApiNodes = require('./api-nodes'); Not being used ATM
 	var authUi = __webpack_require__(7);
+	var app = __webpack_require__(6);
 
 	var userEventHandlers = function userEventHandlers() {
 
 	  $('#sign-up').on('submit', function (event) {
 	    event.preventDefault();
 	    var data = getFormFields(this);
+	    app.server.signUpData = getFormFields(this);
 	    authApi.signUp(authUi.signUpSuccess, authUi.signUpFailure, data);
 	  });
 
@@ -104,21 +105,20 @@ webpackJsonp([0],[
 
 	var app = __webpack_require__(6);
 
+	var signIn = function signIn(success, failure, data) {
+	  $.ajax({
+	    method: "POST",
+	    url: app.server.api + '/sign-in',
+	    data: data
+	  }).done(success, data).fail(failure);
+	};
+
 	var signUp = function signUp(success, failure, data) {
 	  $.ajax({
 	    method: "POST",
 	    url: app.server.api + '/sign-up',
 	    data: data
-	  }).done(success).fail(failure);
-	};
-
-	var signIn = function signIn(success, failure, data) {
-	  $.ajax({
-	    method: "POST",
-	    url: app.server.api + '/sign-in',
-	    data: data,
-	    dataProcessing: false
-	  }).done(success).fail(failure);
+	  }).done(success, data).fail(failure);
 	};
 
 	var signOut = function signOut(success, failure, data) {
@@ -184,6 +184,7 @@ webpackJsonp([0],[
 	var app = __webpack_require__(6);
 	var apiNodes = __webpack_require__(8);
 	var display = __webpack_require__(9);
+	var authApi = __webpack_require__(5);
 
 	var success = function success(data) {
 	  console.log(data);
@@ -203,6 +204,9 @@ webpackJsonp([0],[
 	  $('.page-content').removeClass('hidden');
 	  $('.landing-header').addClass('hidden');
 	  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
+	  $('.upload-form').each(function () {
+	    this.reset();
+	  });
 	};
 
 	var signInFailure = function signInFailure(error) {
@@ -217,6 +221,8 @@ webpackJsonp([0],[
 	  $('#sign-up').each(function () {
 	    this.reset();
 	  });
+	  console.log(app.server.signUpData);
+	  authApi.signIn(signInSuccess, signInFailure, app.server.signUpData);
 	};
 
 	var signUpFailure = function signUpFailure(error) {
@@ -367,6 +373,9 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var displayAllNodes = function displayAllNodes(nodes) {
+	  nodes.nodes.forEach(function (e) {
+	    return e.updated_at = e.updated_at.split('T')[0];
+	  });
 	  var allNodesTemplate = __webpack_require__(10);
 	  $('#all-nodes').html(allNodesTemplate({
 	    nodes: nodes.nodes
@@ -387,7 +396,9 @@ webpackJsonp([0],[
 	module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
 	    var alias1=container.lambda, alias2=container.escapeExpression;
 
-	  return "      <tr class=\"all-files-row\">\n        <td><a href=\"#\" data-type=\""
+	  return "      <tr class=\"all-files-row\">\n        <td>"
+	    + alias2(alias1((depth0 != null ? depth0.type : depth0), depth0))
+	    + "</td>\n        <td><a href=\"#\" data-type=\""
 	    + alias2(alias1((depth0 != null ? depth0.type : depth0), depth0))
 	    + "\" data-location=\""
 	    + alias2(alias1((depth0 != null ? depth0.location : depth0), depth0))
@@ -397,14 +408,14 @@ webpackJsonp([0],[
 	    + alias2(alias1((depth0 != null ? depth0.updated_at : depth0), depth0))
 	    + "</td>\n        <td>"
 	    + alias2(alias1((depth0 != null ? depth0.tags : depth0), depth0))
-	    + "</td>\n        <td><button type=\"button\" class=\"btn btn-success edit-tags\" data-toggle=\"modal\" data-target=\"#edit-tags-modal\" data-id=\""
+	    + "</td>\n        <td><button type=\"button\" class=\"btn edit-tags\" data-toggle=\"modal\" data-target=\"#edit-tags-modal\" data-id=\""
 	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
-	    + "\" ><span class=\"glyphicon glyphicon-tags\"></span>Edit Tags</button></td>\n        <td><button type=\"button\" class=\"btn btn-trash delete-node\" data-toggle=\"modal\" data-target=\"#delete-file-modal\" data-id=\""
+	    + "\" ><span class=\"glyphicon glyphicon-tags\"></span></button></td>\n        <td><button type=\"button\" class=\"btn btn-trash delete-node\" data-toggle=\"modal\" data-target=\"#delete-file-modal\" data-id=\""
 	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
-	    + "\" ><span class=\"glyphicon glyphicon-trash\"></span> Delete File</button></td>\n      </tr>\n";
+	    + "\" ><span class=\"glyphicon glyphicon-trash\"></span></button></td>\n      </tr>\n";
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var stack1, helper, options, buffer = 
-	  "<table class=\"files-table\" id=\"file-table\">\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Last Modified</th>\n      <th>Tags</th>\n      <th>Edit Tags</th>\n      <th>Delete File</th>\n    </tr>\n  </thead>\n  <tbody>\n";
+	  "<table class=\"files-table table-responsive table\"  id=\"file-table\">\n  <thead>\n    <tr>\n      <th>Type</th>\n      <th>Name</th>\n      <th>Date Modified</th>\n      <th>Tags</th>\n      <th>Edit Tags</th>\n      <th>Delete</th>\n    </tr>\n  </thead>\n  <tbody>\n";
 	  stack1 = ((helper = (helper = helpers.nodes || (depth0 != null ? depth0.nodes : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"nodes","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},options) : helper));
 	  if (!helpers.nodes) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
 	  if (stack1 != null) { buffer += stack1; }
@@ -1676,20 +1687,22 @@ webpackJsonp([0],[
 	        $('.breadcrumb').append('<li class="child active">' + $(e.target).text() + '</li>');
 	      }
 	  });
-
 	  $('.breadcrumb').on('click', function (e) {
 	    e.preventDefault();
 	    var name = $(e.target).text();
-	    if (name === 'Home') {
+	    var homeWrapper = $(e.target).prop("tagName");
+	    if (name === 'Home' && homeWrapper === 'A') {
 	      app.currentDirectory = 'home';
 	      authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
 	      traverseBreadcrumb(e);
 	    } else {
 	      var search = new RegExp('^(.*?)' + name);
 	      var result = app.currentDirectory.match(search);
-	      app.currentDirectory = result[0];
-	      authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
-	      traverseBreadcrumb(e);
+	      if (result) {
+	        app.currentDirectory = result[0];
+	        authApiNodes.getDirectory(display.displayAllNodes, nodeUi.Failure, app.currentDirectory);
+	        traverseBreadcrumb(e);
+	      }
 	    }
 	  });
 	};
@@ -1734,7 +1747,7 @@ webpackJsonp([0],[
 	// edits/adds tags
 	var editNodeSuccess = function editNodeSuccess() {
 	  console.log('Tag successfully added');
-	  apiNodes.getAllNodes();
+	  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
 	  $('#edit-tags-modal').modal('hide');
 	  $('#edit-tag-form').each(function () {
 	    this.reset();
@@ -1743,7 +1756,7 @@ webpackJsonp([0],[
 
 	var deleteNodeSuccess = function deleteNodeSuccess() {
 	  console.log('Node successfully deleted');
-	  apiNodes.getAllNodes();
+	  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
 	  $('#delete-file-modal').modal('hide');
 	};
 
