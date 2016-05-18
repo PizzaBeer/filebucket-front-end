@@ -14,7 +14,7 @@ const failure = (error) => {
 
 const uploadNodeSuccess = () => {
   console.log('Node successfully uploaded.');
-  apiNodes.getAllNodes();
+  apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
   $('#upload-file-modal').modal('hide');
   $('.upload-form').each(function(){
     this.reset();
