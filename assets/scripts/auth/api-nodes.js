@@ -31,7 +31,7 @@ const getAllNodes = function(success, failure) {
     .fail(failure);
 };
 
-//Retrieve directory of the User
+// Retrieve home directory upon log in
 const getDirectory = function(success, failure, id) {
   $.ajax({
       url: app.server.api + '/nodes/' + id,
@@ -41,6 +41,7 @@ const getDirectory = function(success, failure, id) {
     }).done(success)
     .fail(failure);
 };
+
 
 const editNode = function(success, failure, data, nodeId) {
   console.log(data);
@@ -83,6 +84,7 @@ const createFolder = (success, failure, data) => {
     }).done(success)
     .fail(failure);
 };
+
 
 module.exports = {
   uploadNode,
