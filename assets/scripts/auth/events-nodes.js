@@ -80,8 +80,8 @@ const nodeEventHandlers = () => {
       //events to dynamically change breadcrumb to current location
       $('.breadcrumb .active').empty();
       $('.breadcrumb .active').append(`<a href="#">${text}</a>`);
-      $('.breadcrumb .active').removeClass();
-      $('.breadcrumb').append(`<li class="active">${$(e.target).text()}</li>`);
+      $('.breadcrumb .active').removeClass('active');
+      $('.breadcrumb').append(`<li class="child active">${$(e.target).text()}</li>`);
     }
   });
 
