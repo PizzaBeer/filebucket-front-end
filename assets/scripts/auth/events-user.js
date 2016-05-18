@@ -13,14 +13,12 @@ const userEventHandlers = () => {
     event.preventDefault();
     let data = getFormFields(this);
     authApi.signUp(authUi.signUpSuccess, authUi.failure, data);
-    console.log(data);
   });
 
   $('#sign-in').on('submit', function (event) {
     let data = getFormFields(this);
     event.preventDefault();
     authApi.signIn(authUi.signInSuccess, authUi.failure, data);
-    console.log(data);
   });
 
   $('#sign-out').on('click', function (event) {
