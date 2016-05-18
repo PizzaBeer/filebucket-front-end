@@ -21,11 +21,13 @@ const signInSuccess = (data) => {
   $('.breadcrumb').show();
   $('.page-content').removeClass('hidden');
   $('.landing-header').addClass('hidden');
-
-  //Calls GET for User's home directory
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
-  // apiNodes.getAllNodes(); change this to get all folders
+};
 
+const signInFailure = (error) => {
+  console.error(error);
+  $('#sign-in-modal').modal('hide');
+  $('#sign-in-fail-modal').modal('show');
 
 };
 
@@ -34,7 +36,15 @@ const signUpSuccess = (data) => {
   $('#sign-up-modal').modal('hide');
   $('#sign-up').each(function(){
     this.reset();
-});
+  });
+};
+
+const signUpFailure = (error) => {
+  console.error(error);
+  $('#sign-up-modal').modal('hide');
+  $('#sign-up-fail-modal').modal('show');
+
+
 };
 
 
@@ -69,6 +79,8 @@ module.exports = {
   success,
   changePwSuccess,
   signUpSuccess,
+  signUpFailure,
   signOutSuccess,
   signInSuccess,
+  signInFailure
 };
