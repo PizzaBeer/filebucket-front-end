@@ -86,9 +86,9 @@ const nodeEventHandlers = () => {
         console.log(name);
         let search = new RegExp(`^(.*?)${name}`);
         let teststring = "one,two,three,four,Documents";
-        let result = teststring.match(search);
+        appData.currentDirectory = name;
+        let result = appData.currentDirectory.match(search);
         console.log(result);
-        // appData.currentDirectory = name;
         // console.log(appData.currentDirectory);
         // authApiNodes.getDirectory(display.displayAllNodes, authUi.Failure, appData.currentDirectory);
 
