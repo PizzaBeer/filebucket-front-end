@@ -133,7 +133,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sign-Up</h4>
+        <h4 class="modal-title" id="myModalLabel">Create an Account</h4>
       </div>
       <div class="modal-body">
         <form id="sign-up">
@@ -150,7 +150,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Already have an account? Sign in here</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Already have an account? Log in here</a>
       </div>
     </div>
   </div>
@@ -192,7 +192,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">change password title</h4>
+        <h4 class="modal-title" id="myModalLabel">Change Password</h4>
       </div>
       <div class="modal-body">
         <!--Change Password Form -->
@@ -203,7 +203,7 @@
           <div class="form-group">
             <input type="password" name="passwords[new]" class="form-control" id="exampleInputPassword1" placeholder="New Password">
           </div>
-          <button type="submit" class="btn btn-primary" id="btn-submit">change password</button>
+          <button type="submit" class="btn btn-primary" id="btn-submit">Change</button>
         </form>
         <!--End Change Password Form -->
       </div>
@@ -219,12 +219,12 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Are you sure you want to sign out?</h4>
+        <h4 class="modal-title" id="myModalLabel">Are you sure you want to log out?</h4>
       </div>
       <div class="modal-body">
         <form id="sign-out">
-          <button type="submit" class="btn btn-primary" id="btn-logout">Sign Out</button>
-          <a href="#" data-dismiss="modal" data-toggle="modal">cancel</a>
+          <button type="submit" class="btn btn-primary" id="btn-logout">Log Out</button>
+          <a href="#" data-dismiss="modal" data-toggle="modal">Cancel</a>
         </form>
       </div>
     </div>
@@ -241,7 +241,7 @@
         <h4 class="modal-title">Password Changed</h4>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">let's see</button>
+        <button type="button" class="btn btn-primary">Close</button>
       </div>
     </div>
   </div>
@@ -254,10 +254,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Password Not Changed</h4>
+        <h4 class="modal-title">Unable to change password</h4>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">let's see</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#change-password-modal">Try Again</button>
       </div>
     </div>
   </div>
@@ -270,7 +270,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">The email address and password you entered did not match our records. Please double-check and try again!</h4>
+        <h4 class="modal-title">The email address and password you entered did not match our records. Please double-check and try again.</h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Back</button>
@@ -290,7 +290,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#sign-up-modal">Back</button>
-        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Already have an account? Sign in here.</a>
+        <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Already have an account? Log in here.</a>
       </div>
     </div>
   </div>
@@ -302,14 +302,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Edit Tags</h4>
+        <h4 class="modal-title" id="myModalLabel">Agg Tags</h4>
         <div class="modal-body">
         <form id="edit-tag-form">
           <input type="text" name="node[tags]" placeholder="favorites">
-          <button class="btn btn-success edit-tags-btn" type="submit" name="action"><span class="glyphicon glyphicon-tags">Add Tag</button>
+          <button class="btn btn-success edit-tags-btn" type="submit" name="action"><span class="glyphicon glyphicon-tags">Add</button>
         </form>
         </div>
-          <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-trash">Edit Tags</button>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
     </div>
@@ -323,11 +322,12 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Delete File</h4>
+        <h4 class="modal-title" id="myModalLabel">Delete Item</h4>
       </div>
       <div class="modal-body">
-        <h2> Are you sure you want to delete this forever? FOREVER?</h2>
-          <button type="button" class="btn btn-trash delete-node-btn"><span class="glyphicon glyphicon-trash">Delete File</button>
+        <p> Are you sure you want to delete this item?</p>
+          <button type="button" class="btn btn-trash delete-node-btn"><span class="glyphicon glyphicon-trash">Delete</button>
+          <a href="#" data-dismiss="modal" data-toggle="modal">Close</a>
       </div>
     </div>
   </div>
@@ -341,7 +341,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Select a file to upload</h4>
       </div>
       <div class="modal-body">
         <div class="upload-file">
@@ -363,13 +363,12 @@
 
 
 <!--- Add Create Foder Modal Here-->
-
 <div class="modal fade" id="create-folder-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Add a folder</h4>
       </div>
       <div class="modal-body">
         <form id="create-folder-form">
@@ -377,7 +376,7 @@
             <input id="name" type="text" class="form-control" name="node[name]" placeholder="My Folder">
           </div>
           </div>
-          <button type="submit" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-folder"></span>Create Folder</button>
+          <button type="submit" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-folder"></span>Add</button>
         </form>
       </div>
       <div class="modal-footer">
