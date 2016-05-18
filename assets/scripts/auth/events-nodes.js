@@ -62,7 +62,6 @@ const nodeEventHandlers = () => {
     data += `&node%5Bpath%5D=,${app.currentDirectory},`;
     console.log('this is data');
     authApiNodes.createFolder(nodeUi.createFolderSuccess, nodeUi.failure, data); //add ajax call
-    console.log(data);
   });
 
   $('.all-nodes').on('click', function(e) {
