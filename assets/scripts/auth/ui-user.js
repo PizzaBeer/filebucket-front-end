@@ -25,7 +25,7 @@ const signInSuccess = (data) => {
   $('.myaccount-dropdown').removeClass('hidden');
   $('body').removeClass('bg-image');
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
-  $('.upload-form').each(function(){
+  $('.upload-form').each(function() {
     this.reset();
   });
 };
@@ -40,7 +40,7 @@ const signInFailure = (error) => {
 const signUpSuccess = (data) => {
   console.log("Sign up successful");
   $('#sign-up-modal').modal('hide');
-  $('#sign-up').each(function(){
+  $('#sign-up').each(function() {
     this.reset();
   });
   console.log(app.server.signUpData);
@@ -63,20 +63,20 @@ const signOutSuccess = () => {
   $('.breadcrumb').hide();
   $('.breadcrumb .child').remove();
   $('.breadcrumb .root').addClass('active');
-  $('.root').replaceWith( `<li class="root active">Home</li>` );
+  $('.root').replaceWith(`<li class="root active">Home</li>`);
   $('.myaccount-dropdown').addClass('hidden');
   $('body').addClass('bg-image');
+  $('.page-conent').addClass('hidden');
   //clear contents
 };
-
 
 const changePwSuccess = (data) => {
   console.log("Password change successful!");
   $('#change-password-modal').modal('hide');
-  $('#change-password').each(function(){
+  $('#change-password').each(function() {
     this.reset();
-  //THIS needs to change to hide in BS
-});
+    //THIS needs to change to hide in BS
+  });
 };
 
 const changePwFailure = (error) => {
@@ -84,8 +84,6 @@ const changePwFailure = (error) => {
   $('#change-password-modal').modal('hide');
   $('#change-password-fail-modal').modal('show');
 };
-
-
 
 module.exports = {
   failure,
