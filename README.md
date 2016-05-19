@@ -2,14 +2,28 @@
 
 # FileBucket Project: Qloud File Storage
 
+## Technologies
+
+We made **SoftSurv** using:
+
+-   HTML/CSS
+-   JavaScript
+-   jQuery
+-   Handlebars
+-   Bootstrap
+-   Express
+-   Mongoose
+-   Node.js
+-   MongoDB
 
 
-
-## Languages and tools Used
+## Languages and Technologies Used
 
 ### HTML
 
   -[HTML] You know what HTML is.
+
+  -[Handlebars](http://handlebarsjs.com/) Handlebars builds semantic HTML templates.
 
 ### JavaScript
 
@@ -19,11 +33,25 @@
 
   -[NPM](https://www.npmjs.com/) is used for node package management.
 
+  -[Node.js](https://nodejs.org/en/) Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+  -[jQuery](https://jquery.com/) is a fast, small, and feature-rich JavaScript library. It handles things like HTML document traversal and manipulation, event handling, animation, and Ajax.
+
 ### CSS
 
-  - [CSS3] Raw Cascading Style Sheets for styling our HTML
+  -[CSS3] Raw Cascading Style Sheets for styling our HTML
 
-### POSTMAN
+### Back End
+
+  -[MongoDB]
+
+  -[Mongoose]
+
+
+
+
+
+### TOOLS
 
   -[POSTMAN](https://www.getpostman.com/) is used to test HTTP requests to APIS
 
@@ -50,7 +78,6 @@
 6. Create a new Pull Request
 7. Profit! :white_check_mark:
 
-*To test your workflow with changelog generator, you can use [test repo](https://github.com/skywinder/changelog_test/)*
 
 ## Our Development Process
 
@@ -65,6 +92,11 @@
 - This may have slowed our overal rate of prograss, but it gave every developer exposure to every stage of development and kept our momentum steady.
 
 
+## ERD
+
+![ERD](http://i.imgur.com/wN5N6iH.jpg)
+
+## Wire Frames ![WireFrames](https://i.gyazo.com/0ccac675be470898568f60699475d4d7.png)
 
 ## User Stories
 
@@ -85,9 +117,17 @@
 through folders and files in a way that's easy to understand.
 
 
+## Contributing
+
+1. Create an issue and describe your idea
+2. [Fork it here](https://github.com/PizzaBeer)
+3. Create your feature branch (`git checkout -b my-new-feature`)
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Publish the branch (`git push origin my-new-feature`)
+6. Create a new Pull Request
+7. Profit! :white_check_mark:
 
 
-## Wire Frames ![WireFrames](https://i.gyazo.com/0ccac675be470898568f60699475d4d7.png)
 
 [![Ben Adamski](https://avatars1.githubusercontent.com/u/16841950?v=3&s=460)](https://github.com/benjamski) | [![Natalie Djerf](https://avatars3.githubusercontent.com/u/17814071?v=3&s=460)](https://github.com/natdjerf) | [![Roberto DelValle](https://avatars1.githubusercontent.com/u/17518260?v=3&s=400)](https://github.com/rdelvallej32) | [![Zachary Simpson](https://avatars2.githubusercontent.com/u/9722944?v=3&s=400)](https://github.com/cuprous)
 ---|---|---
