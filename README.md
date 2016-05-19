@@ -22,7 +22,7 @@
 
   -[jQuery](https://jquery.com/) is a fast, small, and feature-rich JavaScript library. It handles things like HTML document traversal and manipulation, event handling, animation, and Ajax.
 
-  -[Express](http://expressjs.com/) Minimalist JavaScript framework
+  -[Express.js](http://expressjs.com/) Minimalist JavaScript framework
 
 ### CSS
 
