@@ -123,8 +123,16 @@ The application waas built using the following technologies:
 
 - How do we set our application apart from obvious alternatives like dropbox? What can we do better/different?
 
--Learning to effectively take advantage of git team workflow, pull requests and branch management.
+- Learning to effectively take advantage of git team workflow, pull requests and branch management.
 
+## Future Implementations
+
+- Make use of drag and drop feature by using jquery plugin
+- animation
+- further security features
+- feature to download files without opening tab / option to download
+- sleek animations on folder and file crud features
+- Sort files and Folders
 
  ## Are we missing some essential feature?
 
