@@ -4,8 +4,6 @@
 
 ## Technologies
 
-We made **SoftSurv** using:
-
 -   HTML/CSS
 -   JavaScript
 -   jQuery
@@ -43,9 +41,9 @@ We made **SoftSurv** using:
 
 ### Back End
 
-  -[MongoDB]
+  -[MongoDB](https://docs.mongodb.com/) MongoDB is an open-source, document database designed for ease of development and scaling.
 
-  -[Mongoose]
+  -[Mongoose](http://mongoosejs.com/) MongoDB object modeling for Node.js that includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
 
 
 
