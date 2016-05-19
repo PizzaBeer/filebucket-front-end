@@ -160,7 +160,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	var server = {
-	  api: 'http://localhost:8080'
+	  api: 'http://qloud.herokuapp.com'
 	};
 
 	var currentUser = {
