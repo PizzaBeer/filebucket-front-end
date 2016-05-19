@@ -160,7 +160,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	var server = {
-	  api: 'https://qloud.herokuapp.com'
+	  api: 'http://localhost:8080'
 	};
 
 	var currentUser = {
@@ -416,9 +416,13 @@ webpackJsonp([0],[
 	    + alias2(alias1((depth0 != null ? depth0.tags : depth0), depth0))
 	    + "</td>\n        <td><button type=\"button\" class=\"btn edit-tags\" data-toggle=\"modal\" data-target=\"#edit-tags-modal\" data-id=\""
 	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
-	    + "\" ><span class=\"glyphicon glyphicon-tags\"></span></button></td>\n        <td><button type=\"button\" class=\"btn btn-trash delete-node\" data-toggle=\"modal\" data-target=\"#delete-file-modal\" data-id=\""
+	    + "\" ><span class=\"glyphicon glyphicon-tags\" data-id=\""
 	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
-	    + "\" ><span class=\"glyphicon glyphicon-trash\"></span></button></td>\n      </tr>\n";
+	    + "\"></span></button></td>\n        <td><button type=\"button\" class=\"btn btn-trash delete-node\" data-toggle=\"modal\" data-target=\"#delete-file-modal\" data-id=\""
+	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
+	    + "\" ><span class=\"glyphicon glyphicon-trash\" data-id=\""
+	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
+	    + "\"></span></button></td>\n      </tr>\n";
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var stack1, helper, options, buffer = 
 	  "<table class=\"files-table table-responsive table\"  id=\"file-table\">\n  <thead>\n    <tr>\n      <th>Type</th>\n      <th>Name</th>\n      <th>Date Modified</th>\n      <th>Tags</th>\n      <th>Edit Tags</th>\n      <th>Delete</th>\n    </tr>\n  </thead>\n  <tbody>\n";
