@@ -66,7 +66,7 @@ const signOutSuccess = () => {
   $('.root').replaceWith(`<li class="root active">Home</li>`);
   $('.myaccount-dropdown').addClass('hidden');
   $('body').addClass('bg-image');
-  $('.page-conent').addClass('hidden');
+  $('.page-content').addClass('hidden');
   //clear contents
 };
 
