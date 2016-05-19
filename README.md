@@ -2,7 +2,24 @@
 
 # FileBucket Project: Qloud File Storage
 
-Qloud is a
+## Install
+
+```
+$ npm install
+```
+
+## About Qloud
+
+Qloud is a cloud based file storage Single Page web Application designed to
+deliver an easy to use file upload and storage servce. The design is minimalistic
+and clean, to keep the focus on functionality and the user experience.
+
+The application waas built using the following technologies:
+
+// **List of node packages coming soon** //
+
+
+
 
 ## Languages and Technologies Used
 
