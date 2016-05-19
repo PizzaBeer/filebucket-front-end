@@ -1,7 +1,7 @@
 'use strict';
 
 const server = {
-  api: 'https://qloud.herokuapp.com',
+  api: 'http://localhost:8080',
   };
 
   let currentUser = {
