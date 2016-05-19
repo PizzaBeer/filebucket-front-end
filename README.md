@@ -34,15 +34,20 @@
 
   -[Mongoose](http://mongoosejs.com/) MongoDB object modeling for Node.js that includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
 
+### FEATURES
+
+| **Upload File**                                              | **View File**                                              | **Edit Tags**                                              | **Delete**                                                   | **Folder Navigation**                                            |
+|--------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------|--------------------------------------------------------------|------------------------------------------------------------------|
+| [![upload](https://gyazo.com/f8c9d8798a95ef328e0d2dbe11570b74)] | [![view](https://gyazo.com/f965fcd4c02c3f5ca5bc1d1b8295f5bd)] | [![edit](https://gyazo.com/07fa2a1e1b961d3ba2565d038d087dfe)] | [![delete](https://gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc)] | [![navigation](https://gyazo.com/b1b66496643af81a4a21072da39d006a)] |
+| CREATE                                                       | READ                                                       | UPDATE                                                     | DESTROY                                                      | AWESOME                                                          |
 
 
-
-
+[![https://gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc](https://i.gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc.gif)](https://gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc)
 ### TOOLS
 
   -[POSTMAN](https://www.getpostman.com/) is used to test HTTP requests to APIS
 
-  ## Am I missing some essential feature?
+  ## Are we missing some essential feature?
 
   - **Nothing is impossible!**
 
