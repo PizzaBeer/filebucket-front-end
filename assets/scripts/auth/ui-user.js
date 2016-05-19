@@ -24,6 +24,7 @@ const signInSuccess = (data) => {
   $('.landing-header').addClass('hidden');
   $('.myaccount-dropdown').removeClass('hidden');
   $('body').removeClass('bg-image');
+  $('#sidebar-wrapper').removeClass('hidden');
   apiNodes.getDirectory(display.displayAllNodes, failure, app.currentDirectory);
   $('.upload-form').each(function() {
     this.reset();
@@ -67,6 +68,7 @@ const signOutSuccess = () => {
   $('.myaccount-dropdown').addClass('hidden');
   $('body').addClass('bg-image');
   $('.page-content').addClass('hidden');
+  $('#sidebar-wrapper').addClass('hidden');
   //clear contents
 };
 
