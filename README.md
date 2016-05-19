@@ -36,13 +36,11 @@
 
 ### FEATURES
 
-| **Upload File**                                              | **View File**                                              | **Edit Tags**                                              | **Delete**                                                   | **Folder Navigation**                                            |
-|--------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------|--------------------------------------------------------------|------------------------------------------------------------------|
-| [![upload](https://gyazo.com/f8c9d8798a95ef328e0d2dbe11570b74)] | [![view](https://gyazo.com/f965fcd4c02c3f5ca5bc1d1b8295f5bd)] | [![edit](https://gyazo.com/07fa2a1e1b961d3ba2565d038d087dfe)] | [![delete](https://gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc)] | [![navigation](https://gyazo.com/b1b66496643af81a4a21072da39d006a)] |
-| CREATE                                                       | READ                                                       | UPDATE                                                     | DESTROY                                                      | AWESOME                                                          |
+| **Upload File**                                                                                                                                                       | **View File**                                                                                                                                                         | **Edit Tags**                                                                                                                                                         | **Delete**                                                                                                                                                            | **Folder Navigation**                                                                                                                                                 |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![https://gyazo.com/f8c9d8798a95ef328e0d2dbe11570b74](https://i.gyazo.com/f8c9d8798a95ef328e0d2dbe11570b74.gif)](https://gyazo.com/f8c9d8798a95ef328e0d2dbe11570b74) | [![https://gyazo.com/f965fcd4c02c3f5ca5bc1d1b8295f5bd](https://i.gyazo.com/f965fcd4c02c3f5ca5bc1d1b8295f5bd.gif)](https://gyazo.com/f965fcd4c02c3f5ca5bc1d1b8295f5bd) | [![https://gyazo.com/07fa2a1e1b961d3ba2565d038d087dfe](https://i.gyazo.com/07fa2a1e1b961d3ba2565d038d087dfe.gif)](https://gyazo.com/07fa2a1e1b961d3ba2565d038d087dfe) | [![https://gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc](https://i.gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc.gif)](https://gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc) | [![https://gyazo.com/b1b66496643af81a4a21072da39d006a](https://i.gyazo.com/b1b66496643af81a4a21072da39d006a.gif)](https://gyazo.com/b1b66496643af81a4a21072da39d006a) |
+| CREATE                                                                                                                                                                | READ                                                                                                                                                                  | UPDATE                                                                                                                                                                | DESTROY                                                                                                                                                               | AWESOME                                                                                                                                                               |
 
-
-[![https://gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc](https://i.gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc.gif)](https://gyazo.com/dfa013f3f4ed2424d6482c036c1a0fbc)
 ### TOOLS
 
   -[POSTMAN](https://www.getpostman.com/) is used to test HTTP requests to APIS
@@ -61,6 +59,7 @@
   - Stop being like everyone else. Take risks, seek adventure, use Qloud.
 
   ## Contributing
+
 
 1. Create an issue and describe your idea
 2. [Fork it here](https://github.com/PizzaBeer)
@@ -130,6 +129,15 @@ through folders and files in a way that's easy to understand.
 5. Publish the branch (`git push origin my-new-feature`)
 6. Create a new Pull Request
 7. Profit! :white_check_mark:
+
+## The Back End Api Server
+
+The back end repository for the API that this web application consumes can be
+found [here](https://github.com/PizzaBeer/filebucket-back-end).
+
+## Deployment
+
+The gh-pages hosted front end for this application is [here](http://pizzabeer.github.io/filebucket-front-end )
 
 ## DEVELOPED WITH LOVE by Team Pizza Beer
 | [![Ben Adamski](http://i.imgur.com/O7eT5sX.jpg)](https://github.com/benjamski) | [![Natalie Djerf](https://avatars3.githubusercontent.com/u/17814071?v=3&s=460)](https://github.com/natdjerf) | [![Roberto DelValle](https://avatars1.githubusercontent.com/u/17518260?v=3&s=400)](https://github.com/rdelvallej32) | [![Zachary Simpson](https://avatars2.githubusercontent.com/u/9722944?v=3&s=400)](https://github.com/cuprous) |
