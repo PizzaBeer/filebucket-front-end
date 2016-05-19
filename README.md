@@ -76,7 +76,10 @@
 
 - We regularly leveraged pair and group programming to keep all team members active in every stage of the development process and approach every problem as a cohesive unit, from multiple perspectives.
 
-- This may have slowed our overal rate of prograss, but it gave every developer exposure to every stage of development and kept our momentum steady.
+- Any time in the development process that one of us became stuck on a feature build beyond our timebox limit, we would rotate turns with one developer "driving" the development and physically typing. Their code would be displayed on a large monitor and they would make commits while the rest of us would lead their process, troubleshoot related issues, whiteboard problems etc...
+
+- This may have slowed our overall rate of prograss and skewed the ownership of our commit history, but it gave every developer exposure to every stage of development and kept our momentum steady.
+
 
 #### Obstacles
 
