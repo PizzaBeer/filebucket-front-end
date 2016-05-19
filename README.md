@@ -2,15 +2,13 @@
 
 # FileBucket Project: Qloud File Storage
 
-## Languages and Technologies Used
+Qloud is a
 
-### HTML
+## Languages and Technologies Used
 
   -[HTML] You know what HTML is.
 
   -[Handlebars](http://handlebarsjs.com/) Handlebars builds semantic HTML templates.
-
-### JavaScript
 
   -[JSHint](http://www.jshint.com/docs/) is used to prevent JavaScript error.
 
@@ -24,11 +22,7 @@
 
   -[Express.js](http://expressjs.com/) Minimalist JavaScript framework
 
-### CSS
-
   -[CSS3] Raw Cascading Style Sheets for styling our HTML
-
-### Back End
 
   -[MongoDB](https://docs.mongodb.com/) MongoDB is an open-source, document database designed for ease of development and scaling.
 
