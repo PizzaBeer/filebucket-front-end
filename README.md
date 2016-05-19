@@ -2,19 +2,6 @@
 
 # FileBucket Project: Qloud File Storage
 
-## Technologies
-
--   HTML/CSS
--   JavaScript
--   jQuery
--   Handlebars
--   Bootstrap
--   Express
--   Mongoose
--   Node.js
--   MongoDB
-
-
 ## Languages and Technologies Used
 
 ### HTML
@@ -34,6 +21,8 @@
   -[Node.js](https://nodejs.org/en/) Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
   -[jQuery](https://jquery.com/) is a fast, small, and feature-rich JavaScript library. It handles things like HTML document traversal and manipulation, event handling, animation, and Ajax.
+
+  -[Express](http://expressjs.com/) Minimalist JavaScript framework
 
 ### CSS
 
@@ -89,6 +78,15 @@
 
 - This may have slowed our overal rate of prograss, but it gave every developer exposure to every stage of development and kept our momentum steady.
 
+#### Obstacles
+
+- Use of Materialized Paths to navigate through files and folders
+
+- Creating the breadcrumb effect to show that navigation to the user on the front end
+
+- Heroku deployment
+
+-
 
 ## ERD
 
