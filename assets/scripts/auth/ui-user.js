@@ -69,6 +69,8 @@ const signOutSuccess = () => {
   $('body').addClass('bg-image');
   $('.page-content').addClass('hidden');
   $('#sidebar-wrapper').addClass('hidden');
+  $('.landing-header').removeClass('hidden');
+
   //clear contents
 };
 
