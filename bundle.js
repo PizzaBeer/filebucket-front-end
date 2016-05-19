@@ -422,7 +422,7 @@ webpackJsonp([0],[
 	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
 	    + "\"></span></button></td>\n        <td><button type=\"button\" class=\"btn btn-trash delete-node\" data-toggle=\"modal\" data-target=\"#delete-file-modal\" data-id=\""
 	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
-	    + "\" ><span class=\"glyphicon glyphicon-trash\" data-id=\""
+	    + "\"><span class=\"glyphicon glyphicon-trash\" data-id=\""
 	    + alias2(alias1((depth0 != null ? depth0._id : depth0), depth0))
 	    + "\"></span></button></td>\n      </tr>\n";
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
