@@ -147,16 +147,6 @@ The application waas built using the following technologies:
   - ***I already use dropbox, why should I use Qloud?***
   - Stop being like everyone else. Take risks, seek adventure, use Qloud.
 
-  ## Contributing
-
-
-1. Create an issue and describe your idea
-2. [Fork it here](https://github.com/PizzaBeer)
-3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Add some feature'`)
-5. Publish the branch (`git push origin my-new-feature`)
-6. Create a new Pull Request
-7. Profit! :white_check_mark:
 
 ## ERD
 
@@ -197,6 +187,7 @@ through folders and files in a way that's easy to understand.
 
 The back end repository for the API that this web application consumes can be
 found [here](https://github.com/PizzaBeer/filebucket-back-end).
+
 
 ## Deployment
 
