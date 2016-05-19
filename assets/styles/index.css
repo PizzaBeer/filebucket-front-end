@@ -12,7 +12,6 @@ body {
       rgba(0, 0, 0, 0.5)
     ),
     url(https://docs.bryantx.gov/icons/stateofthecity/stateofthecity-it.jpg);
-  /*background: url(https://docs.bryantx.gov/icons/stateofthecity/stateofthecity-it.jpg) no-repeat center center fixed;*/
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -28,7 +27,7 @@ a {
 }
 
 a:hover {
-  color: #3C763D
+  color: #49B388
 }
 
 
@@ -59,8 +58,18 @@ a:hover {
 }
 
 
-.landing-header a{
+.landing-header a {
   color: #49B388;
+  font-size: 34px;
+}
+
+.intro-message h1 {
+  font-size: 60px;
+  margin-top: 40px;
+}
+
+.intro-message h3 {
+  font-size: 34px;
 }
 
 .list-inline {
@@ -118,12 +127,12 @@ a:hover {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #fff;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #49B388;
     background: rgba(255,255,255,0.2);
 }
 
@@ -132,7 +141,9 @@ a:hover {
     text-decoration: none;
 }
 
-
+.sidebar-nav .glyphicon {
+  color: #fff;
+}
 
 @media(min-width:768px) {
     #wrapper {
@@ -190,6 +201,7 @@ a:hover {
   background-color: transparent;
   border-color: transparent;
 }
+
 
 td {
   padding-right: 5px;
