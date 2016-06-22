@@ -86,15 +86,14 @@ The application waas built using the following technologies:
 
 ## Approach
 
- ***Flesh this out***
-
  -front end skeleton html
  -user stories
  -wireframes
  -data structure
  -back end skeleton
  -pair programming, group code alongs
- -constant communication between
+ -constant communication between developers
+ -KISS
 
  ## Our Development Process
 
@@ -108,16 +107,16 @@ The application waas built using the following technologies:
 
  - Any time in the development process that one of us became stuck on a feature build beyond our timebox limit, we would rotate turns with one developer "driving" the development and physically typing. Their code would be displayed on a large monitor and they would make commits while the rest of us would lead their process, troubleshoot related issues, whiteboard problems etc...
 
- - This may have slowed our overall rate of prograss and skewed the ownership of our commit history, but it gave every developer exposure to every stage of development and kept our momentum steady.
+ - This may have slowed our overall rate of prograss and skewed the ownership of our commit history, but it gave every developer exposure to all stages of development and kept our momentum steady.
 
 
  #### Obstacles
 
- - Use of Materialized Paths to navigate through files and folders
+ - Use of Materialized Paths to navigate through files and folders.
 
- - Creating the breadcrumb effect to show that navigation to the user on the front end
+ - Creating the breadcrumb effect to show that navigation to the user on the front end.
 
- - Heroku deployment
+ - Heroku deployment.
 
  - persistent issues with integratiing navigation of folders between back and end front end.
 
