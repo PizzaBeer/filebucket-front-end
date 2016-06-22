@@ -210,6 +210,6 @@ The gh-pages hosted front end for this application is [here](http://pizzabeer.gi
 © 2016+, [General Assembly, Inc.](http://generalassemb.ly) [MIT License].<br>
 
 
-Authored and maintained by Ben Adamski | Natalie Djerf | Roberto DelValle | Zachary Simpson and with help from :fa-heart:[contributors](https://github.com/PizzaBeer/filebucket-front-end/graphs/contributors).
+Authored and maintained by Ben Adamski | Natalie Djerf | Roberto DelValle | Zachary Simpson and with help from [contributors](https://github.com/PizzaBeer/filebucket-front-end/graphs/contributors).
 
 [MIT License]: http://mit-license.org/
