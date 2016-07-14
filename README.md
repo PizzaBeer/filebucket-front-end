@@ -95,13 +95,13 @@ The application waas built using the following technologies:
  -constant communication between developers
  -KISS
 
- ## Our Development Process
+## Our Development Process
 
- #### We used Trello to manage our workflow and stay on schedule
+#### We used Trello to manage our workflow and stay on schedule
 
  <img src="http://i.imgur.com/nYlWO3X.gif">
 
- #### Group Programming
+#### Group Programming
 
  - We regularly leveraged pair and group programming to keep all team members active in every stage of the development process and approach every problem as a cohesive unit, from multiple perspectives.
 
@@ -110,7 +110,7 @@ The application waas built using the following technologies:
  - This may have slowed our overall rate of prograss and skewed the ownership of our commit history, but it gave every developer exposure to all stages of development and kept our momentum steady.
 
 
- #### Obstacles
+### Obstacles
 
  - Use of Materialized Paths to navigate through files and folders.
 
@@ -133,7 +133,7 @@ The application waas built using the following technologies:
 - sleek animations on folder and file crud features
 - Sort files and Folders
 
- ## Are we missing some essential feature?
+## Are we missing some essential feature?
 
   - **Nothing is impossible!**
 
@@ -141,12 +141,12 @@ The application waas built using the following technologies:
 
   - *Bug reports, feature requests, patches, and well-wishes are always welcome.* :heavy_exclamation_mark:
 
-  ## FAQ
+## FAQ
 
   - ***I already use dropbox, why should I use Qloud?***
   - Stop being like everyone else. Take risks, seek adventure, use Qloud.
 
-  ## Contributing
+## Contributing
 
 
 1. Create an issue and describe your idea
